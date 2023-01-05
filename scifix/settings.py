@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-u-tf_w-$la5d8kk-boo)5d!s1swp8bto583xd$g+_$!^ywt7=#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['scifixblog.herokuapp.com']
 
 SITE_ID = 1
 
