@@ -289,7 +289,7 @@ form {
 .blog-image-box1 {
     display: flex;
     flex-direction: column-reverse;
-    background: linear-gradient(180deg, rgba(5, 5, 5, 0.251), rgb(5, 5, 5)), url('/blog/media/scifixlogo22.png');
+    background: linear-gradient(180deg, rgba(5, 5, 5, 0.251), rgb(5, 5, 5)), url('/media/scifixlogo22.png');
     padding: 15px;
     width: 50vw;
     height: 60vh;
@@ -313,7 +313,7 @@ form {
 .blog-image-box2 {
     display: flex;
     flex-direction: column-reverse;
-    background: linear-gradient(180deg, rgba(5, 5, 5, 0.251), rgb(5, 5, 5)), url('/blog/media/earth4.jpg');
+    background: linear-gradient(180deg, rgba(5, 5, 5, 0.251), rgb(5, 5, 5)), url('/media/earth4.jpg');
     padding: 15px;
     width: 50vw;
     height: 60vh;
@@ -336,7 +336,7 @@ form {
 .blog-image-box3 {
     display: flex;
     flex-direction: column-reverse;
-    background: linear-gradient(180deg, rgba(5, 5, 5, 0.251), rgb(5, 5, 5)), url('/blog/media/atoms_waves.jpg');
+    background: linear-gradient(180deg, rgba(5, 5, 5, 0.251), rgb(5, 5, 5)), url('/media/atoms_waves.jpg');
     padding: 15px;
     width: 50vw;
     height: 60vh;
@@ -359,7 +359,7 @@ form {
 .blog-image-box4 {
     display: flex;
     flex-direction: column-reverse;
-    background: linear-gradient(180deg, rgba(5, 5, 5, 0.419), rgba(5, 5, 5, 0.879)), url('/blog/media/DART_poster.jpg');
+    background: linear-gradient(180deg, rgba(5, 5, 5, 0.419), rgba(5, 5, 5, 0.879)), url('/media/DART_poster.jpg');
     padding: 15px;
     width: 50vw;
     height: 60vh;
