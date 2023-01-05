@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-u-tf_w-$la5d8kk-boo)5d!s1swp8bto583xd$g+_$!^ywt7=#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['scifixblog.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['scifixblog.herokuapp.com']
 
 SITE_ID = 2
 
@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
 ]
 
-SITE_ID = 1
+
 
 LOGIN_REDIRECT_URL = '/home/'
 LOGOUT_REDIRECT_URL = '/home/'
