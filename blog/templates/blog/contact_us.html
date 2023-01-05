@@ -1,0 +1,210 @@
+<html>
+    <head>
+        <title>SCIFIX</title>
+        <meta charset="utf-8"/>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'blog/style1.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@600&family=Lobster&family=Nanum+Myeongjo&family=Playfair+Display:ital,wght@0,400;1,500&family=Quicksand:wght@300;700&family=Space+Mono&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        {% include 'blog/nav.html' %}
+        <div class="block1"></div>
+        <div class="middle">
+            <div class="middle-header">
+                <h2 class="middle-header-text">Contact Us</h2>
+                
+                
+            </div>
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="names">
+                    <input type="text" name="first_name" id="first_name" placeholder="Chris" value={{ user.first_name }}>
+                    <input type="text" name="last_name" id="last_name" placeholder="Wolfmann" value={{ user.last_name }}>
+                </div>
+                <div class="email-message">
+                    <div class="email">
+                        <input type="email" name="email1" id="email1" placeholder="someone@example.com" value={{ user.email }}>
+                        <input type="email" name="email2" id="email2" placeholder="Confirm Email" class="cofirm-email">
+                    </div>
+                    <div class="message">
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Leave a message..."></textarea>
+                    </div>
+                </div>
+                <button class="contact-us-submit-button" type="submit"><span>S U B M I T</span></button>
+            </form>
+            <div class="error-message">
+                <span>{{ error_message_email }}</span>
+            </div>
+            <div class="note">
+                <span>{{ note }}</span>
+            </div>
+            
+            <div class="phone-number"><span>Call Us: +2349082261794</span></div>
+            <a href="{% url 'home' %}"><div class="scifix-logo"><span>S C I F I X</span></div></a>
+        </div>
+
+        <style>
+            
+            .phone-number {
+                
+                font-family: 'IBM Plex Sans JP', sans-serif;
+                font-size: 11px;
+                border: 1px solid white;
+                color: white;
+                padding: 3px;
+                position: absolute;
+                background-color: transparent;
+                bottom: 20;
+                right: 35%;
+                transition-duration: 0.3s;
+            }
+            .phone-number:hover {
+                background-color: white;
+                color: black;
+            }
+            @media (max-width: 800px) {
+                
+                .middle {
+                    width: 97%;
+                    
+                }
+                
+            }
+            .error-message {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 13px;
+                padding: 5px;
+                color: rgba(230, 4, 4, 0.758);
+                font-family: 'Quicksand', sans-serif;
+            }
+            .note {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 13px;
+                padding: 5px;
+                color: rgba(255, 255, 255, 0.541);
+                font-family: 'Quicksand', sans-serif;
+            }
+            a {
+                text-decoration: none;
+            }
+            .middle {
+                
+                border-bottom: 1px solid rgba(132, 30, 2, 0.705);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                
+                height: 550px;
+                background-color: rgb(17, 17, 17);
+            }
+            .middle-header {
+                font-family: 'IBM Plex Sans JP', sans-serif;
+                display: flex;
+                background-color: rgb(107, 24, 1);
+                align-items: center;
+                width: 100%;
+                height: 10%;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.377);
+                transition-duration: 0.3s;
+            }
+            .middle-header:hover {
+                background-color: white;
+                color: rgb(107, 24, 1);
+            }
+            .middle-header-text {
+                margin: 10px;
+            }
+            .scifix-logo {
+                font-family: 'IBM Plex Sans JP', sans-serif;
+                font-size: 13px;
+                border: 1px solid white;
+                color: white;
+                padding: 5px;
+                position: absolute;
+                background-color: transparent;
+                bottom: 20;
+                right: 20;
+                transition-duration: 0.3s;
+            }
+            .scifix-logo:hover {
+                background-color: white;
+                color: black;
+            }
+            .contact-us-submit-button {
+                font-family: 'IBM Plex Sans JP', sans-serif;
+                font-size: 13px;
+                border: none;
+                color: rgb(0, 0, 0);
+                padding: 5px;
+                position: absolute;
+                background-color: rgb(107, 24, 1);;
+                bottom: 20;
+                left: 20;
+                transition-duration: 0.3s;
+            }
+
+            .contact-us-submit-button:hover {
+                background-color: white;
+                color: black;
+            }
+
+            .names {
+                display: flex;
+                flex-direction: row;
+
+
+            }
+            .email-message {
+                display: flex;
+                flex-direction: row;
+            }
+            .email {
+                width: 50%;
+                margin: 10px;
+            }
+            .message {
+                width: 50%;
+                margin: 10px;
+            }
+            form input {
+                font-family: 'Quicksand', sans-serif;
+                width: 100%;
+                padding: 15px;
+                color: white;
+                border: 1px solid white;
+                
+                background-color: transparent;
+            }
+            textarea {
+                font-family: 'Quicksand', sans-serif;
+                width: 100%;
+                padding: 15px;
+                
+                color: white;
+                border: 1px solid white;
+                background-color: transparent;
+            }
+            form {
+                margin: 20px;
+            }
+            .names input {
+                margin: 10px;
+            }
+            .email input {
+                margin-top: 30px;
+            }
+
+        </style>
+        
+        
+    </body>
+</html>

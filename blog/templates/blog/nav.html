@@ -1,0 +1,64 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'blog/nav.css' %}">
+<header class="nav">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <div class="nav-elem-box">
+        <a href="{% url 'home' %}" class="nav-elem-box-a">Home</a>
+        <div class="sub nav-elem-box-a"><span style="filter: blur(1px);">Subscription</span><ion-icon name="lock-closed-outline" class="lock"></ion-icon></div>
+        <a href="{% url 'blogs' %}" class="nav-elem-box-a">Blog</a>
+        <div class="nav-button" id="nav_button">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+    </div>
+    <a href="{% url 'home' %}"><h1 class="heading">S C I F I X</h1></a>
+    <div class="nav-elem-box">
+        
+        {% if user.is_authenticated %}
+        <a href="" class="nav-username">{{ user.username }}</a>
+        <a href="http://127.0.0.1:8000/accounts/logout/" class="logout">Log Out</a>
+        
+        
+        {% else %}
+        <a href="{% url 'login' %}" class="login">Log In</a>
+        <a href="{% url 'signup' %}" class="signup">Sign Up</a>
+        {% endif %}
+    </div>
+    
+    
+</header>
+<div class="secondary-nav" id="secondary_nav" hidden>
+    <div class="close-nav" id="close_nav">
+        <ion-icon name="close-outline"></ion-icon>
+    </div>
+    <div style="height: 45px; width: 100%;"></div>
+    <div class="secondary-nav-elem-box">
+        <a href="{% url 'home' %}" class="secondary-nav-elem-box-a">Home</a>
+        <a href="{% url 'blogs' %}" class="secondary-nav-elem-box-a">Blogs</a>
+    </div>
+</div>
+
+<script>
+    document.getElementById("nav_button").addEventListener("click", function() {
+        
+        sec_nav = document.getElementById("secondary_nav");
+        sec_nav.style.display = "block";
+        sec_nav.style.width = "150px";
+        
+    });
+
+    document.getElementById("close_nav").addEventListener("click", function() {
+        
+        sec_nav = document.getElementById("secondary_nav");
+        sec_nav.style.display = "none";
+        sec_nav.style.width = "0px";
+        
+    });
+</script>
+<style>
+    @media (min-width: 600px) {
+        .secondary-nav {
+            display: none;
+        }
+    }
+</style>

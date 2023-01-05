@@ -1,0 +1,165 @@
+.subscribe-popup {
+    z-index: 2;
+    position: fixed;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    
+    width: 100%;
+    height: 20vh;
+}
+
+.subscribe-popup-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    text-align: center;
+    width: 50%;
+    background-color: rgb(224, 224, 224);
+    
+    height: 100%;
+}
+
+.subscribe-popup-head h1 {
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+    transition-duration: 0.3s;
+    font-size: 27px;
+}
+
+
+.subscribe-popup-form {
+    font-family: 'Quicksand', sans-serif;
+    padding: 5px;
+    display: flex;
+    background-color: rgb(16, 16, 16);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.subscribe-popup-form form {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+}
+
+.after-sub {
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.subscribe-popoup-email {
+    width: 65%;
+    height: 40px;
+    padding: 10px;
+    border: 2px solid white;
+
+}
+
+.subscribe-popoup-button {
+    font-family: 'IBM Plex Sans JP', sans-serif;
+    height: 40px;
+    padding: 10px;
+    font-size: 10px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    transition-duration: 0.3s;
+
+}
+.subscribe-popoup-button:hover {
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+
+}
+
+
+
+.close-sub {
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    padding: 10px;
+    top: 10;
+    right: 10;
+    padding: 5px;
+    transition-duration: 0.3s;
+}
+
+.close-sub:hover {
+    background-color: rgba(123, 123, 123, 0.486);
+}
+.popup-block {
+    z-index: 1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background-color: rgba(0, 0, 0, 0.384);
+}
+
+
+@media (max-width: 1100px) {
+    .subscribe-popup-head h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .popup-block {
+        
+        width: 100vw;
+        height: 100vh;
+        
+    }
+    .subscribe-popup-head {
+        width: 100%;
+    }
+    .subscribe-popup-form {
+        width: 100%;
+    }
+
+    .subscribe-popup-form form{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .subscribe-popoup-email {
+        margin-bottom: 5px;
+        width: 100%;
+    }
+    .subscribe-popoup-button {
+        margin-top: 5px;
+        width: 60%;
+        font-size: 12px;
+    }
+    .subscribe-popup {
+        width: 60vw;
+        height: 40vh;
+        flex-direction: column;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+    }
+    
+    .close-sub {
+        color: black;
+        
+    }
+    
+    
+}

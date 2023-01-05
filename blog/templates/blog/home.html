@@ -1,0 +1,561 @@
+<html>
+    <head>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <link rel="icon" href="/blog/media/planet.svg" type="image/svg">
+        <title>SCIFIX</title>
+        <meta charset="utf-8"/>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'blog/style1.css' %}">
+        <link rel="stylesheet" href="{% static 'blog/blogs.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@600&family=Josefin+Sans&family=Lobster&family=Nanum+Myeongjo&family=Playfair+Display:ital,wght@0,400;1,500&family=Quicksand:wght@300;700&family=Space+Mono&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        {% comment "" %}
+        {% if user.is_authenticated %}
+        {% endcomment %}
+        
+        
+        {% include 'blog/nav.html' %}
+        
+        <div class="hover-info photoreceptors">
+            <span class="hover-span">A photoreceptor cell is a specialized type of cell that can carry out Phototransduction - the process of converting light (visible electromagnetic radiation) into signals (nerve impulses) that can stimulate biological processes.</span>
+        </div>
+        <div class="hover-info multispectral">
+            <span class="hover-span">Multispectral imaging captures image data within specific wavelength ranges across the electromagnetic spectrum.</span>
+        </div>
+        <div class="home-content">
+            <div class="block1"></div>
+            <div class="b12">
+                <div class="box1">
+                    <div class="box1-text">
+                        <div class="box1-head">
+                            <h1>This is </h1><h2 class="scifix-block">S C I F I X</h2>
+                        </div>
+                        <p class="box1-text-body"><span class="big">W</span>elcome to <span class="scifix-block-span">S C I F I X</span>, a blog that explores the intersection of science, arts, and culture!
+
+                            At <span class="scifix-block-span">S C I F I X</span>, we believe that science and the arts are not mutually exclusive, but rather complementary disciplines that can inform and enrich each other. We are passionate about sharing content that highlights the ways in which science and the arts intersect and interact, and we aim to provide a platform for discussion and exploration of this fascinating and important topic. 
+                            From discussions of the latest scientific research to explorations of the cultural significance of science and the arts, we strive to provide a diverse and thought-provoking range of content for our readers.</p>
+                            
+                    </div>
+                    <div class="box1-image">
+                        <img src="/blog/media/earth3.jpg" alt="Earth">
+                    </div>
+                </div>
+                <div class="box2">
+                    <h2 class="scifix-block">S C I F I X</h2><span>is</span><h2 class="sci">SCIENCE</h2><span>&</span><h2 class="cul">CULTURE</h2>
+                </div>
+                <style>
+                    @media (max-width: 1000px) {
+                        .box2 {
+                            flex-direction: column;
+                        }
+                        .box1 {
+                            
+                            flex-direction: column;
+                            padding: 2px;
+                            margin: 2px;
+                        }
+                        .box1-text {
+                            padding: 2px;
+                            margin: 2px;
+                        }
+                        .box1-image img {
+                            width: 100vw;
+                            height: 100vw;
+                        }
+                        .b12 {
+                            margin-top: 120px;
+                        }
+                    }
+                </style>
+            </div>
+            <div class="fun-facts-phone">
+                <div class="fact-phone">
+                    <div class="fact-phone-image mantis" alt="Mantis Shrimp">
+                        
+                        <h1>Mantis Shrimp</h1>
+                        
+                    </div>
+                    <div class="fact-phone-text">
+                        <h1 class="dyk-phone"><ion-icon name="bulb-outline" class="fact-bulb" onclick="changeColor()"></ion-icon>Did you know?</h1>
+                        <span class="fact-text-phone">The Mantis shrimp has the most complex eyes in the animal kingdom, with up to 16 types of <span class="mark" onmousemove="display('photoreceptors')" onmouseout="hide('photoreceptors')">photoreceptors</span>. They are also capable of seeing circular polarized light and <span class="mark" onmousemove="display('multispectral')" onmouseout="hide('multispectral')">multispectral</span> images. Some species of mantis shrimp can even see ultraviolet and infrared light, which is outside of the visible spectrum for humans. The mantis shrimp's eyes are mounted on movable stalks, which allow them to independently focus on two different objects at the same time. They are also known for their powerful claws, which they use to attack and kill prey.</span>
+                    </div>
+                    <style>
+                        .mantis h1 {
+                            color: transparent;
+                            width: 100%;
+                            backdrop-filter: blur(0px);
+                            transition-duration: 0.3s;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        .mantis {
+                            font-family: 'Quicksand', sans-serif;
+                            filter: blur(0px);
+                            background: linear-gradient(180deg, rgba(0, 0, 0, 0.379), rgba(0, 0, 0, 0.648)), url("/blog/media/mantis_shrimp2.jfif");
+                            background-position: center center;
+                            background-size: cover;
+                            color: transparent;
+                            transition-duration: 0.3s;
+                        }
+                        .mantis::before {
+                            content: attr(alt);
+                        }
+
+                        .mantis h1:hover {
+                            color: white;
+                            backdrop-filter: blur(2px);
+                        }
+                    </style>
+                </div>
+                <div class="fact-phone">
+                    <div class="fact-phone-image bloodhound" alt="Bloodhound">
+                        
+                        <h1>Bloodhound</h1>
+                        
+                    </div>
+                    <div class="fact-phone-text">
+                        <h1 class="dyk-phone"><ion-icon name="bulb-outline" class="fact-bulb" onclick="changeColor()"></ion-icon>Did you know?</h1>
+                        <span class="fact-text-phone">The bloodhound is a breed of dog known for its keen sense of smell and ability to track scents over long distances. They have been used for centuries to track humans and animals, and are still used today by law enforcement agencies and search and rescue teams to locate missing people.
+
+                            Bloodhounds are bred specifically for their sense of smell, which is thought to be up to 100 times more sensitive than a human's. They have a long, drooping face and large nostrils that help them draw in more air and pick up on faint scents. They are also able to follow a scent trail that is days or even weeks old, and can even track a person's scent through water and across a variety of terrain.
+                            
+                            In addition to their exceptional sense of smell, bloodhounds are also known for their gentle and patient personality.
+                            
+                            
+                        </span>
+                    </div>
+                    <style>
+                        .bloodhound h1 {
+                            color: transparent;
+                            width: 100%;
+                            backdrop-filter: blur(0px);
+                            transition-duration: 0.3s;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        .bloodhound {
+                            font-family: 'Quicksand', sans-serif;
+                            filter: blur(0px);
+                            background: linear-gradient(180deg, rgba(0, 0, 0, 0.379), rgba(0, 0, 0, 0.648)), url("/blog/media/bloodhound.jfif");
+                            background-position: center center;
+                            background-size: cover;
+                            color: transparent;
+                            transition-duration: 0.3s;
+                        }
+                        .bloodhound::before {
+                            content: attr(alt);
+                        }
+
+                        .bloodhound h1:hover {
+                            color: white;
+                            backdrop-filter: blur(2px);
+                        }
+                    </style>
+                </div>
+            </div>
+            <div class="fun-facts">
+                
+                <div class="fact">
+                    <div onclick="scrollToPrev()" class="fact-back"><span><b>B</b></span><span><b>A</b></span><span><b>C</b></span><span><b>K</b></span></div>
+                    <div class="fact-body">
+                        
+                        <div class="fact-box-text">
+                            <h1 class="dyk"><ion-icon name="bulb-outline" class="fact-bulb" onclick="changeColor()"></ion-icon>Did you know?</h1>
+                            <span class="fact-text">The Mantis shrimp has the most complex eyes in the animal kingdom, with up to 16 types of <span class="mark" onmousemove="display('photoreceptors')" onmouseout="hide('photoreceptors')">photoreceptors</span>. They are also capable of seeing circular polarized light and <span class="mark" onmousemove="display('multispectral')" onmouseout="hide('multispectral')">multispectral</span> images. Some species of mantis shrimp can even see ultraviolet and infrared light, which is outside of the visible spectrum for humans. The mantis shrimp's eyes are mounted on movable stalks, which allow them to independently focus on two different objects at the same time. They are also known for their powerful claws, which they use to attack and kill prey.</span>
+                        </div>
+                        <div class="fact-box-image mantis" alt="Mantis Shrimp">
+                            <h1>Mantis Shrimp</h1>
+                        </div>
+                    </div>
+                    <div onclick="scrollToNext()" class="fact-next"><span><b>N</b></span><span><b>E</b></span><span><b>X</b></span><span><b>T</b></span></div>
+                </div>
+                
+                <style>
+                    .mantis h1 {
+                        color: transparent;
+                        width: 100%;
+                        backdrop-filter: blur(0px);
+                        transition-duration: 0.3s;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .mantis {
+                        font-family: 'Quicksand', sans-serif;
+                        filter: blur(0px);
+                        background: linear-gradient(180deg, rgba(0, 0, 0, 0.379), rgba(0, 0, 0, 0.648)), url("/blog/media/mantis_shrimp2.jfif");
+                        background-position: center center;
+                        background-size: cover;
+                        color: transparent;
+                        transition-duration: 0.3s;
+                    }
+                    .mantis::before {
+                        content: attr(alt);
+                    }
+
+                    .mantis h1:hover {
+                        color: white;
+                        backdrop-filter: blur(2px);
+                    }
+                </style>
+                <div class="fact">
+                    <div onclick="scrollToPrev()" class="fact-back"><span><b>B</b></span><span><b>A</b></span><span><b>C</b></span><span><b>K</b></span></div>
+                    <div class="fact-body">
+                        <div class="fact-box-text">
+                            <h1 class="dyk"><ion-icon name="bulb-outline" class="fact-bulb" onclick="changeColor()"></ion-icon>Did you know?</h1>
+                            <span class="fact-text">The bloodhound is a breed of dog known for its keen sense of smell and ability to track scents over long distances. They have been used for centuries to track humans and animals, and are still used today by law enforcement agencies and search and rescue teams to locate missing people.
+
+                                Bloodhounds are bred specifically for their sense of smell, which is thought to be up to 100 times more sensitive than a human's. They have a long, drooping face and large nostrils that help them draw in more air and pick up on faint scents. They are also able to follow a scent trail that is days or even weeks old, and can even track a person's scent through water and across a variety of terrain.
+                                
+                                In addition to their exceptional sense of smell, bloodhounds are also known for their gentle and patient personality.
+                            </span>
+                        </div>
+                        <div class="fact-box-image bloodhound" alt="Bloodhound">
+                            <h1>Bloodhound</h1>
+                        </div>
+                    </div>
+                    <div onclick="scrollToNext()" class="fact-next"><span><b>N</b></span><span><b>E</b></span><span><b>X</b></span><span><b>T</b></span></div>
+                </div>
+                <style>
+                    .bloodhound h1 {
+                        color: transparent;
+                        width: 100%;
+                        backdrop-filter: blur(0px);
+                        transition-duration: 0.3s;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .bloodhound {
+                        font-family: 'Quicksand', sans-serif;
+                        filter: blur(0px);
+                        background: linear-gradient(180deg, rgba(0, 0, 0, 0.379), rgba(0, 0, 0, 0.648)), url("/blog/media/bloodhound.jfif");
+                        background-position: center center;
+                        background-size: cover;
+                        color: transparent;
+                        transition-duration: 0.3s;
+                    }
+                    .bloodhound::before {
+                        content: attr(alt);
+                    }
+
+                    .bloodhound h1:hover {
+                        color: white;
+                        backdrop-filter: blur(2px);
+                    }
+                </style>
+            </div>
+            <script>
+                function scrollToNext() {
+                    var container = document.querySelector(".fun-facts");
+                    
+                    container.scrollTo({
+                        left: container.scrollLeft + container.clientWidth
+                    });
+                    
+                }
+
+                function scrollToPrev() {
+                    var container = document.querySelector(".fun-facts");
+                    
+                    container.scrollTo({
+                        left: container.scrollLeft - container.clientWidth
+                    });
+                    
+                }
+
+                
+                function changeColor() {
+                    bulb = document.querySelectorAll(".fact-bulb");
+                    page = document.querySelectorAll(".fact-box-text");
+                    heading = document.querySelectorAll(".dyk");
+                    text = document.querySelectorAll(".fact-text");
+                    mark = document.querySelectorAll(".mark");
+                    hover = document.querySelectorAll('.hover-span')
+                    phone_text = document.querySelectorAll(".fact-phone-text");
+                    phone_head = document.querySelectorAll(".dyk-phone");
+                    
+                    for (var i = 0; i < bulb.length; i++) {
+                        if (bulb[i].style.color === "black") {
+                            page[i].style.backgroundColor = "black";
+                            bulb[i].style.color = "white";
+                            heading[i].style.color = "white";
+                            text[i].style.color = "white";
+                            phone_text[i].style.color = "white";
+                            phone_text[i].style.backgroundColor = "black";
+                            phone_head[i].style.color = "white";
+                        } else {
+                        
+                            page[i].style.backgroundColor = "white";
+                            bulb[i].style.color = "black";
+                            heading[i].style.color = "black";
+                            text[i].style.color = "black";
+                            phone_text[i].style.color = "black";
+                            phone_text[i].style.backgroundColor = "white";
+                            phone_head[i].style.color = "black";
+                        }
+                    }
+
+                    hover.forEach(element => {
+                        if (element.style.backgroundColor === 'black') {
+                            element.style.backgroundColor = 'white';
+                            element.style.color = 'black';
+                        } else {
+                            element.style.backgroundColor = 'black';
+                            element.style.color = 'white';
+                        }
+                    });
+                    
+                    
+                }
+                // Get the hover div and the cursor div
+                
+                
+
+                // Add a mousemove event listener to the hover div
+                function display(str) {
+                // Show the cursor div
+                    var cursorDiv = document.querySelector("." + str);
+                    cursorDiv.style.display = "flex";
+                    
+                    // Set the position of the cursor div
+                    var rect = cursorDiv.getBoundingClientRect();
+                    if (rect.right > window.innerWidth) {
+                        var scrollTop = window.pageYOffset;
+                        var scrollLeft = window.pageXOffset;
+                        cursorDiv.style.top = event.clientY + scrollTop + "px";
+                        cursorDiv.style.left = event.clientX + scrollLeft - cursorDiv.clientWidth + "px";
+                        
+                        
+                        
+                    } else {
+                        var scrollTop = window.pageYOffset;
+                        var scrollLeft = window.pageXOffset;
+                        cursorDiv.style.top = event.clientY + scrollTop + "px";
+                        cursorDiv.style.left = event.clientX + scrollLeft + "px";
+                    }
+                    
+                }
+
+                // Add a mouseout event listener to the hover div
+                function hide(str) {
+                // Hide the cursor div
+                    var cursorDiv = document.querySelector("." + str);
+                    cursorDiv.style.top = 0;
+                    cursorDiv.style.left = 0;
+                    cursorDiv.style.right = 0;
+                    cursorDiv.style.display = "none";
+                };
+
+
+
+            </script>
+            <div class="box3">
+                <div class="box3-left">
+                    <div class="daily-quote">
+                        <span class="daily-quote-body">"The greatest revolutions of our time are not political, they are scientific. The discovery of the structure of DNA was a more important revolution than the French Revolution. The development of the internet was a more important revolution than the Industrial Revolution. We are at the beginning of a revolution now that is going to be as important as the development of agriculture was, 10,000 years ago. We are at the beginning of the ability to reprogram biology."</span>
+                        <span class="daily-quote-person">Craig Venter</span>
+                    </div>
+                    <div class="spotlight">
+                        <h1><span class="scifix-block">S C I F I X</span> Spotlight</h1>
+                        <div class="blog">
+                            <div class="blog-image-box2 blog-image-box" alt="earth">
+                                <div class="description">
+                                    <span class="description-text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, sit modi! Praesentium similique laborum voluptas voluptate culpa.
+                                </div>
+                                <div class="title">
+                                    <a href="#"><h1>Welcome to Earth</h1></a>
+                                    <a href="#"><div class="read-post-button">Read Post</div></a>
+                                </div>
+                                <div class="blog-info">
+                                    <a href="#">29 Dec 2022</a>
+                                </div>
+                                
+                            </div>
+                            <style>
+                                .blog-image-box {
+                                    width: 40vw;
+                                    height: 45vh;
+                                    
+                                }
+            
+            
+                                .blog-image-box:hover {
+                                    transition-duration: 0.5s;
+                                    background-size: 94%;
+                                    width: 41vw;
+                                    height: 46vh;
+                                }
+                                @media (max-width: 1350px) {
+                                    
+                                    .blog-image-box {
+                                        
+                                        width: 60vw;
+                                        height: 50vh;
+                                        
+                                    }
+            
+            
+                                    .blog-image-box:hover {
+                                        transition-duration: 0.3s;
+                                        background-size: 94%;
+                                        width: 61vw;
+                                        height: 51vh;
+                                    }
+                                    
+                                }
+                                
+            
+                            </style>
+                        
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="box3-right">
+                    <h1><span class="scifix-block">S C I F I X</span> Latest News</h1>
+                    <div class="organizations">
+                        <div class="organizations-options">
+                            <div class="option">
+                                <img src="/blog/media/mitlogo1.png" alt="">
+                            </div>
+                            <div class="option" style="width: 80px;">
+                                <img src="/blog/media/nasalogo.jpg" alt="" style="width: 100%;">
+                            </div>
+                            <div class="option" style="width: 80px;">
+                                <img src="/blog/media/cernlogo.jpg" alt="" style="width: 100%;">
+                            </div>
+                            <div class="option" style="width: 80px;">
+                                <img src="/blog/media/wiredlogo.jpg" alt="" style="width: 100%; border-radius: 50%;">
+                            </div>
+                            
+                        </div>
+                        <div class="sep-line"></div>
+
+                        <div class="latest-news">
+                            <div class="news">
+                                <div class="news-image" style="margin: 5px;">
+                                    <img src="/blog/media/mitpics1.jpg" alt="" class="news-image-raw">
+                                </div>
+                                <div class="news-text" style="margin: 5px;">
+                                    <div class="news-date-author" style="margin-right: 20px; margin-bottom: 10px; display: flex; flex-direction: row;">
+                                        <span style="word-spacing: normal; font-size: 14px; word-spacing: normal; font-size: 11px; padding-right: 7px; margin-right: 7px; border-right: 1px solid rgba(128, 128, 128, 0.563);">13 Apr 22</span>
+                                        <span style="word-spacing: normal; font-size: 14px; word-spacing: normal; font-size: 11px; font-family: 'IBM Plex Sans JP', sans-serif;">David Ekong</span>
+                                    </div>
+                                    <a href="#" class="news-text-blob">
+                                        MIT Researchers discover new heat engine with no moving parts which they claim is as efficient (or even better) as a steam turbine.
+                                    </a>
+                                    <div class="news-bottom">
+                                        
+                                        <div class="news-text-links" style="margin-top: 10px; font-size: 14px; font-family: 'IBM Plex Sans JP', sans-serif;">
+                                            <a href="#" style="margin: 5px;"><div class="read-post-button">Read More</div></a>
+                                            <a href="https://news.mit.edu/2022/thermal-heat-engine-0413" style="margin: 5px; "><div class="read-post-button">Read Source</div></a>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="news">
+                                <div class="news-image" style="margin: 5px;">
+                                    <img src="/blog/media/mitlightweight.jpg" alt="" class="news-image-raw">
+                                </div>
+                                <div class="news-text" style="margin: 5px;">
+                                    <div class="news-date-author" style="margin-right: 20px; margin-bottom: 10px; display: flex; flex-direction: row;">
+                                        <span style="word-spacing: normal; font-size: 14px; word-spacing: normal; font-size: 11px; padding-right: 7px; margin-right: 7px; border-right: 1px solid rgba(128, 128, 128, 0.563);">2 Feb 22</span>
+                                        <span style="word-spacing: normal; font-size: 14px; word-spacing: normal; font-size: 11px; font-family: 'IBM Plex Sans JP', sans-serif;">David Ekong</span>
+                                    </div>
+                                    <a href="#" class="news-text-blob">
+                                        MIT Researchers claim to have discovered new lightweight material that is stronger than steel.
+                                    </a>
+                                    <div class="news-bottom">
+                                        
+                                        <div class="news-text-links" style="margin-top: 10px; font-size: 14px; font-family: 'IBM Plex Sans JP', sans-serif;">
+                                            <a href="#" style="margin: 5px;"><div class="read-post-button">Read More</div></a>
+                                            <a href="https://news.mit.edu/2022/thermal-heat-engine-0413" style="margin: 5px; "><div class="read-post-button">Read Source</div></a>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subscribe-box">
+            <div class="subscribe-box-header">
+                <div class="subscribe-box-icon-box" onclick="minsub()">
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </div>
+                <div class="subscribe-box-icon-box-2" onclick="maxsub()">
+                    <ion-icon name="chevron-up-outline"></ion-icon>
+                </div>
+                <h2 class="subscribe-box-header-text">Subscribe - It's Free</h2>
+                
+                
+            </div>
+            <form action="" method="post" class="subscribe-box-form">
+                {% csrf_token %}
+                <div class="email-message">
+                    <div class="email">
+                        <input type="email" name="email1" id="email1" placeholder="someone@example.com" value={{ user.email }}>
+                        <input type="email" name="email2" id="email2" placeholder="Confirm Email" class="cofirm-email">
+                    </div>
+                    <div class="message">
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="What made you want more?"></textarea>
+                    </div>
+                </div>
+                <button class="subscribe-button" type="submit" name="subscribe_button" id="subscribe_button"><span>S U B S C R I B E</span></button>
+            </form>
+            <div class="error-message">
+                <span>{{ error_message }}</span>
+            </div>
+            
+            <a href="{% url 'home' %}"><div class="scifix-logo"><span>S C I F I X</span></div></a>
+        </div>
+        <script>
+            function minsub() {
+                sub_form = document.querySelector(".subscribe-box-form")
+                sub_form.style.display = "none";
+                document.querySelector(".scifix-logo").style.display = "none";
+                document.querySelector(".subscribe-box-icon-box").style.display = "none";
+                document.querySelector(".subscribe-box-icon-box-2").style.display = "flex";
+                sub_head = document.querySelector(".subscribe-box-header")
+                sub_head.style.height = "100%";
+                sub = document.querySelector(".subscribe-box")
+                sub.style.height = "55px";
+            }
+            function maxsub() {
+                sub_form = document.querySelector(".subscribe-box-form")
+                sub_form.style.display = "flex";
+                document.querySelector(".scifix-logo").style.display = "flex";
+                document.querySelector(".subscribe-box-icon-box").style.display = "flex";
+                document.querySelector(".subscribe-box-icon-box-2").style.display = "none";
+                sub_head = document.querySelector(".subscribe-box-header")
+                sub_head.style.height = "10%";
+                sub = document.querySelector(".subscribe-box")
+                sub.style.height = "550px";
+            }
+        </script>
+        
+        {% include 'blog/footer.html' %}
+        
+        
+          
+    </body>
+    
+</html>

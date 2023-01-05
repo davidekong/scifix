@@ -1,0 +1,813 @@
+/* 
+
+    font-family: 'IBM Plex Sans JP', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Space Mono', monospace;
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Lobster', cursive;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif;
+*/
+
+a {
+    text-decoration: none;
+}
+
+body {
+    position: relative;
+    word-spacing: 5px;
+    background-color: rgb(0, 0, 0);
+    padding: 0px;
+    margin: 0px;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+
+
+.home-content {
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+
+.box1 {
+    position: relative;
+    padding: 30px;
+}
+
+.box1-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.scifix-block {
+    letter-spacing: 5px;
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+    font-family: 'IBM Plex Sans JP', sans-serif;
+    padding: 5px;
+    font-size: 20px;
+    transition-duration: 0.5s;
+}
+
+.scifix-block:hover {
+    letter-spacing: 5px;
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    font-family: 'IBM Plex Sans JP', sans-serif;
+}
+
+.box1-text {
+    width: 50%;
+    padding: 10px;
+    margin: 10px;
+}
+@media (max-width: 900px) {
+    .box1-text {
+        width: 80%;
+        
+    }
+}
+
+.box1-head h1 {
+    font-family: 'IBM Plex Sans JP', sans-serif;
+    color: white;
+    margin-right: 10px;
+}
+
+.box1-text-body {
+    line-height: 25px;
+    color: white;
+    
+}
+
+.box1-image {
+    
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 400px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.box2 {
+    position: relative;
+    z-index: 1;
+    letter-spacing: 5px;
+    font-family: 'IBM Plex Sans JP', sans-serif;
+    padding: 5px;
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid white;
+}
+
+.box2 h2 {
+    letter-spacing: 5px;
+    margin: 5px;
+    color: black;
+    padding: 5px;
+    transition-duration: 0.5s;
+}
+
+.sci {
+    background-color: aqua;
+    font-family: 'IBM Plex Sans JP', sans-serif;
+    transition-duration: 0.5s;
+}
+
+
+.art {
+    background-color: red;
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    transition-duration: 0.5s;
+}
+
+.cul {
+    background-color: brown;
+    font-family: 'Playfair Display', serif;
+    transition-duration: 0.5s;
+}
+
+.sci:hover {
+    background-color: white;
+}
+
+.art:hover {
+    background-color: white;
+}
+
+.cul:hover {
+    background-color: white;
+}
+
+.box2 span {
+    letter-spacing: 5px;
+    margin: 5px;
+    color: white;
+    font-family: 'IBM Plex Sans JP', sans-serif;
+    padding: 5px;
+}
+
+.box3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 40px;
+}
+
+
+
+.box3 h1 {
+    color: white;
+    font-family: 'IBM Plex Sans JP', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    display: none;
+}
+
+.block1 {
+    height: 60px;
+    width: 100%;
+    position: relative;
+}
+
+.big {
+    font-size: 40px;
+}
+
+
+.scifix-block-span {
+    font-family: 'IBM Plex Sans JP', sans-serif;
+    transition-duration: 0.5s;
+}
+
+.scifix-block-span:hover {
+    letter-spacing: 2px;
+    background-color: white;
+    color: black;
+    font-family: 'IBM Plex Sans JP', sans-serif;
+    padding: 3px;
+}
+
+
+
+
+.fun-facts {
+    margin-bottom: 50px;
+    display: flex;
+    
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    background-color: white;
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.fact {
+    z-index: 0;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    height: 100%;
+}
+
+.fact a {
+    text-decoration: none;
+}
+
+
+
+.fact-back {
+    backdrop-filter: blur(2px);
+    left: 0;
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: white;
+    width: 5%;
+    box-shadow: 2px 0px 4px 6px rgba(0, 0, 0, 0.5);
+    height: 90vh;
+    transition-duration: 0.3s;
+}
+
+.fact-next {
+    backdrop-filter: blur(2px);
+    right: 0;
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 5%;
+    color: white;
+    box-shadow: -2px 0px 4px 6px rgba(0, 0, 0, 0.5);
+    height: 90vh;
+    transition-duration: 0.3s;
+}
+
+
+
+.fact-back span {
+    
+    margin: 10px;
+}
+.fact-next span {
+    margin: 10px;
+}
+
+.fact-back:hover {
+    box-shadow: 4px 0px 10px 12px rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: black;
+}
+
+.fact-next:hover {
+    box-shadow: -4px 0px 10px 12px rgba(0, 0, 0, 0.5);
+    color: black;
+    background-color: white;
+}
+
+
+
+.fact-body {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+.fact-box-text {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+}
+
+.dyk {
+    word-spacing: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Josefin Sans', sans-serif;
+    color: black;
+    
+}
+
+.fact-bulb {
+    padding: 5px;
+    margin-right: 5px;
+    transition-duration: 0.3s;
+}
+
+.fact-bulb:hover {
+    background-color: rgba(0, 0, 0, 0.314);
+}
+
+.fact-text {
+
+    width: 70%;
+    position: relative;
+    word-spacing: normal;
+    font-size: 17px;
+
+}
+
+.fact-box-image {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(29, 29, 29);
+    width: 100%;
+    height: 100%;
+}
+
+
+.fun-facts-phone {
+    display: none;
+    align-items: center;
+    width: 100vw;
+    height: 120vh;
+    background-color: aqua;  
+    overflow-x: scroll;  
+}
+
+.fact-phone {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    overflow-y: hidden;
+}
+
+.fact-phone-image {
+    height: 40%;
+    
+    background-color: rgb(126, 126, 126);
+}
+
+.dyk-phone {
+    word-spacing: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Josefin Sans', sans-serif;
+    color: black;
+    
+}
+
+.fact-text-phone {
+    padding: 15px;
+}
+
+.fact-phone-text {
+    display: flex;
+    word-spacing: normal;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    height: 60%;
+    padding: 5px;
+    background-color: white;
+}
+
+.mark {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+
+}
+
+.mark:hover {
+    background-color: rgba(125, 125, 125, 0.492);
+}
+
+.hover-info {
+
+    display: none;
+    font-family: 'Quicksand', sans-serif;
+    width: 300px;
+    color: white;
+    background-color: black;
+    position: absolute;
+    
+    padding: 10px;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.hover-info span {
+    box-shadow: -2px -2px 3px 2px rgba(0, 0, 0, 0.33);
+    word-spacing: normal;
+    background-color: black;
+    z-index: 1;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.box3-left {
+    margin: 10px;
+}
+
+.box3-right {
+    width: 4000px;
+    margin: 10px;
+}
+
+
+@media (max-width: 1350px) {
+    .box3-right {
+      width: 100%;
+    }
+    .box3 {
+        flex-direction: column;
+      }
+    
+    
+  }
+
+.daily-quote {
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+    font-style: italic;
+    height: 150px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border: 2px solid white;
+    transition-duration: 0.5s;
+    
+}
+
+
+@media (max-width: 800px) {
+    .daily-quote {
+      height: 250px;
+    }
+    .fun-facts {
+        display: none;
+    }
+    .fun-facts-phone {
+        display: flex;
+    }
+  }
+  
+
+.daily-quote:hover {
+    color: black;
+    background-color: white;
+}
+
+.daily-quote-body {
+    font-size: 15px;
+}
+
+.daily-quote-person {
+    margin-left: 10px;
+    font-size: 25px;
+    font-style: italic;
+}
+
+
+.spotlight {
+    margin-top: 50px;
+    padding: 5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+
+
+.organizations-options {
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.option {
+    margin: 15px;
+}
+
+.sep-line {
+    margin-top: 50px;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+
+
+.news {
+    font-family: 'Quicksand', sans-serif;
+    height: 150px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    
+    color: white;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.158);
+}
+
+
+
+.news-text {
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.news-image-raw {
+    width: 250px;
+    transition-duration: 0.3s;
+}
+
+@media (max-width: 800px) {
+    .news-image-raw {
+        width: 200px;
+    }
+    
+  }
+
+  @media (max-width: 530px) {
+    .news-image-raw {
+        width: 150px;
+    }
+    
+  }
+
+.news-image-raw:hover {
+    transform: scale(1.05);
+    margin-right: 5px;
+}
+
+.news-text a {
+    text-decoration: none;
+    color: white;
+}
+
+.news-text-blob {
+    text-decoration: none;
+    word-spacing: normal;
+    font-size: 13px;
+
+}
+
+.news-text-blob:hover {
+    text-decoration: underline;
+}
+
+.news-text-links {
+    word-spacing: normal;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.read-post-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    background-color: white;
+    font-size: 15px;
+    border: 1px solid white;
+    padding: 5px;
+    font-size: 13px;
+    
+    background-color: white;
+    color: black;
+    transition-duration: 0.5s;
+}
+
+
+.read-post-button:hover {
+    background-color: transparent;
+    color: white;
+}
+
+.news-bottom {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+.subscribe-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(132, 30, 2, 0.705);
+    
+    height: 550px;
+    background-color: rgb(17, 17, 17);
+}
+.subscribe-box-header {
+    position: relative;
+    font-family: 'IBM Plex Sans JP', sans-serif;
+    display: flex;
+    justify-content: center;
+    word-spacing: normal;
+    background-color: rgb(107, 24, 1);
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.377);
+    transition-duration: 0.3s;
+}
+.subscribe-box-icon-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 105%;
+    
+    font-size: 20px;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.3s;
+}
+
+.subscribe-box-icon-box-2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 105%;
+    
+    font-size: 20px;
+    color: white;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.3s;
+}
+.subscribe-box-header:hover {
+    background-color: white;
+    color: rgb(107, 24, 1);
+}
+.subscribe-box-header:hover .subscribe-box-icon-box {
+    color: black;
+}
+.subscribe-box-header:hover .subscribe-box-icon-box-2 {
+    color: black;
+}
+.subscribe-box-header-text {
+    margin: 10px;
+}
+.scifix-logo {
+    font-family: 'IBM Plex Sans JP', sans-serif;
+    font-size: 13px;
+    border: 1px solid white;
+    color: white;
+    padding: 5px;
+    position: absolute;
+    background-color: transparent;
+    bottom: 20;
+    right: 20;
+    transition-duration: 0.3s;
+}
+.scifix-logo:hover {
+    background-color: white;
+    color: black;
+}
+
+.subscribe-button {
+    font-family: 'IBM Plex Sans JP', sans-serif;
+    font-size: 13px;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    position: absolute;
+    background-color: rgb(107, 24, 1);;
+    bottom: 20;
+    left: 20;
+    transition-duration: 0.3s;
+}
+
+.subscribe-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.subscribe-box-form {
+    height: 90%;
+    transition-duration: 0.3s;
+}
+.email-message {
+    display: flex;
+    flex-direction: column;
+}
+.email {
+    width: 100%;
+    margin: 10px;
+}
+.message {
+    width: 100%;
+    margin: 10px;
+}
+form input {
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+    padding: 15px;
+    color: white;
+    border: 1px solid white;
+    
+    background-color: transparent;
+}
+textarea {
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+    padding: 15px;
+    
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+}
+form {
+    margin: 20px;
+}
+
+.email input {
+    margin-top: 30px;
+}
+
+
+.error-message {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    padding: 5px;
+    color: rgba(230, 4, 4, 0.758);
+    font-family: 'Quicksand', sans-serif;
+}
+

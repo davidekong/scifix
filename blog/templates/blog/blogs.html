@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <title>SCIFIX</title>
+        <meta charset="utf-8"/>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'blog/blogs.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@600&family=Lobster&family=Playfair+Display&family=Quicksand:wght@300;700&family=Space+Mono&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        {% include 'blog/nav.html' %}
+        <div class="content">
+            <div class="subscribe-box">
+                <div class="subscribe-box-header">
+                    <h2 class="subscribe-box-header-text">Subscribe - It's Free</h2>
+                </div>
+                <form action="" method="post" class="subscribe-box-form">
+                    {% csrf_token %}
+                    <div class="email-message">
+                        <div class="email">
+                            <input type="email" name="email1" id="email1" placeholder="someone@example.com" value={{ user.email }}>
+                            <input type="email" name="email2" id="email2" placeholder="Confirm Email" class="cofirm-email">
+                        </div>
+                        <div class="message">
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="What made you want more?"></textarea>
+                        </div>
+                    </div>
+                    <button class="subscribe-button" type="submit" name="subscribe_button" id="subscribe_button"><span>S U B S C R I B E</span></button>
+                </form>
+                <div class="error-message">
+                    <span>{{ error_message }}</span>
+                </div>
+                
+                <a href="{% url 'home' %}"><div class="scifix-logo"><span>S C I F I X</span></div></a>
+            </div>
+            <div class="blogs">
+                
+                <div class="block1"></div>
+                <style>
+                    @media (max-width: 1350px) {
+                        
+                        .blog-image-box {
+                            
+                            width: 70vw;
+                            height: 40vh;
+                            
+                        }
+
+
+                        .blog-image-box:hover {
+                            transition-duration: 0.3s;
+                            background-size: 94%;
+                            width: 71vw;
+                            height: 41vh;
+                        }
+                        .description {
+                            transform: scale(0.8);
+                        }
+                        .title {
+                            transform: scale(0.8);
+                        }
+                        .blog-info {
+                            transform: scale(0.8);
+                        }
+                        
+                    }
+                    
+
+                </style>
+                <div class="blog">
+                    <div class="blog-image-box1 blog-image-box" alt="SCIFIX">
+                        <div class="description">
+                            <span class="description-text">
+                                Hello 👋, and welcome to SCIFIX!
+                        </div>
+                        <div class="title">
+                            <a href="{% url 'scifix' %}"><h1>Welcome to SCIFIX</h1></a>
+                            <a href="{% url 'scifix' %}"><div class="read-post-button">Read Post</div></a>
+                        </div>
+                        <div class="blog-info">
+                            <a href="#">27 Dec 2022</a>
+                        </div>
+                        
+                    </div>
+                
+                </div>
+                
+                
+                <div class="blog">
+                    <div class="blog-image-box2 blog-image-box" alt="earth">
+                        <div class="description">
+                            <span class="description-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, sit modi! Praesentium similique laborum voluptas voluptate culpa.
+                        </div>
+                        <div class="title">
+                            <a href="#"><h1>Welcome to Earth</h1></a>
+                            <a href="#"><div class="read-post-button">Read Post</div></a>
+                        </div>
+                        <div class="blog-info">
+                            <a href="#">29 Dec 2022</a>
+                        </div>
+                        
+                    </div>
+                
+                </div>
+                
+                <div class="blog">
+                    <div class="blog-image-box4 blog-image-box" alt="NASA DART">
+                        
+                        <div class="description">
+                            <span class="description-text">
+                                The Double Asteroid Redirection Test might be humanity's first step towards space defence machines.
+                            </span>
+                        </div>
+                        <div class="title">
+                            <a href="{% url 'dart' %}"><h1>The Double Asteroid Redirection Test</h1></a>
+                            <a href="{% url 'dart' %}"><div class="read-post-button">Read Post</div></a>
+                        </div>
+                        <div class="blog-info">
+                            <a href="#">28 Dec 2022</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="other-info">
+                <h1>The blog</h1>
+                <span>
+                    Welcome to the Blog. Here you can find many of our blog posts which consists of space related content, biology, the latest enginneering breakthroughs and more. We make sure our blog posts are as quality as they can be and we love feedback, so don't be afraid to leave a comment on our posts. Thank you.
+                    
+                </span>
+                
+            </div>
+            
+        </div>
+
+        
+        {% include 'blog/footer.html' %}
+        
+    </body>
+</html>

@@ -1,0 +1,237 @@
+<html>
+    <head>
+        <title>SCIFIX</title>
+        <meta charset="utf-8"/>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'blog/style1.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@600&family=Lobster&family=Nanum+Myeongjo&family=Playfair+Display:ital,wght@0,400;1,500&family=Quicksand:wght@300;700&family=Space+Mono&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        {% include 'blog/nav.html' %}
+        <div class="block1"></div>
+        <div class="middle">
+            <div class="middle-header">
+                <h2 class="middle-header-text">Sign Up</h2>
+                
+                
+            </div>
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="text" name="username" id="username" placeholder="michealscott8537">
+                <input type="email" name="email" id="email" placeholder="someone@example.com">
+                <input type="text" name="first_name" id="first_name" placeholder="Micheal">
+                <input type="text" name="last_name" id="last_name" placeholder="Scott">
+                <input type="password" name="password1" id="password1" placeholder="Password">
+                <input type="password" name="password2" id="password2" placeholder="Password Again">
+                <button class="login-submit-button" type="submit"><span>S I G N  U P</span></button>
+            </form>
+            <a href="http://127.0.0.1:8000/accounts/google/login/" class="google">
+                <ion-icon name="logo-google" class="google-icon"></ion-icon>
+                <span>Sign Up With Google</span>
+            </a>
+            <div class="error-message">
+                <span>{{ error_message }}</span>
+            </div>
+            <div class="note">
+                <span>{{ note }}</span>
+            </div>
+            
+            <a href="{% url 'home' %}"><div class="scifix-logo"><span>S C I F I X</span></div></a>
+        </div>
+
+        <style>
+            .google {
+                align-items: center;
+                font-family: 'Quicksand', sans-serif;
+                word-spacing: normal;
+                width: fit-content;
+                padding: 10px;
+                display: flex;
+                flex-direction: row;
+                color: white;
+                font-size: 14px;
+                border: 1px solid white;
+                transition-duration: 0.3s;
+            }
+            .google-icon {
+                margin-right: 10px;
+            }
+            .google:hover {
+                color: black;
+                background-color: white;
+            }
+            .phone-number {
+                
+                font-family: 'IBM Plex Sans JP', sans-serif;
+                font-size: 11px;
+                border: 1px solid white;
+                color: white;
+                padding: 3px;
+                position: absolute;
+                background-color: transparent;
+                bottom: 20;
+                right: 35%;
+                transition-duration: 0.3s;
+            }
+            .phone-number:hover {
+                background-color: white;
+                color: black;
+            }
+            @media (max-width: 800px) {
+                
+                .middle {
+                    width: 97%;
+                    
+                }
+                
+            }
+            .error-message {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 13px;
+                padding: 5px;
+                color: rgba(230, 4, 4, 0.758);
+                font-family: 'Quicksand', sans-serif;
+            }
+            .note {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 13px;
+                padding: 5px;
+                color: rgba(255, 255, 255, 0.541);
+                font-family: 'Quicksand', sans-serif;
+            }
+            a {
+                text-decoration: none;
+            }
+            .middle {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-bottom: 1px solid rgba(132, 30, 2, 0.705);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                
+                height: 550px;
+                background-color: rgb(17, 17, 17);
+            }
+            .middle-header {
+                font-family: 'IBM Plex Sans JP', sans-serif;
+                display: flex;
+                background-color: rgb(107, 24, 1);
+                align-items: center;
+                width: 100%;
+                height: 10%;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.377);
+                transition-duration: 0.3s;
+            }
+            .middle-header:hover {
+                background-color: white;
+                color: rgb(107, 24, 1);
+            }
+            .middle-header-text {
+                margin: 10px;
+            }
+            .scifix-logo {
+                font-family: 'IBM Plex Sans JP', sans-serif;
+                font-size: 13px;
+                border: 1px solid white;
+                color: white;
+                padding: 5px;
+                position: absolute;
+                background-color: transparent;
+                bottom: 20;
+                right: 20;
+                transition-duration: 0.3s;
+            }
+            .scifix-logo:hover {
+                background-color: white;
+                color: black;
+            }
+            .login-submit-button {
+                font-family: 'IBM Plex Sans JP', sans-serif;
+                font-size: 13px;
+                border: none;
+                color: rgb(0, 0, 0);
+                padding: 5px;
+                position: absolute;
+                background-color: rgb(107, 24, 1);;
+                bottom: 20;
+                left: 20;
+                transition-duration: 0.3s;
+            }
+
+            .login-submit-button:hover {
+                background-color: white;
+                color: black;
+            }
+
+            .names {
+                display: flex;
+                flex-direction: row;
+
+
+            }
+            .email-message {
+                display: flex;
+                flex-direction: row;
+            }
+            .email {
+                width: 50%;
+                margin: 10px;
+            }
+            .message {
+                width: 50%;
+                margin: 10px;
+            }
+            form input {
+                font-family: 'Quicksand', sans-serif;
+                width: 100%;
+                padding: 15px;
+                color: white;
+                border: 1px solid white;
+                
+                background-color: transparent;
+            }
+            textarea {
+                font-family: 'Quicksand', sans-serif;
+                width: 100%;
+                padding: 15px;
+                
+                color: white;
+                border: 1px solid white;
+                background-color: transparent;
+            }
+            form {
+                margin: 20px;
+            }
+            .names input {
+                margin: 10px;
+            }
+            .email input {
+                margin-top: 30px;
+            }
+
+        </style>
+            
+        
+    </body>
+</html>
+
+
+
+
+
+
+
+

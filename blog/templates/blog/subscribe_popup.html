@@ -1,0 +1,62 @@
+{% load static %}
+<html>
+    <link rel="stylesheet" href="{% static 'blog/subscribe_popup.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@600&family=Josefin+Sans&family=Lobster&family=Nanum+Myeongjo&family=Playfair+Display:ital,wght@0,400;1,500&family=Quicksand:wght@300;700&family=Space+Mono&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <div class="popup-block"></div>
+    <div class="subscribe-popup">
+        
+        <div class="close-sub" id="sub" onclick="closediv()">
+            <ion-icon name="close-outline"></ion-icon>
+        </div>
+        <div class="subscribe-popup-head">
+            <h1><ion-icon name="flask-outline"></ion-icon> Subscribe For Weekly Content <ion-icon name="telescope-outline"></ion-icon>
+            </h1>
+        </div>
+        <div class="subscribe-popup-form">
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="email" name="email" id="email" placeholder="someone@example.com" class="subscribe-popoup-email">
+                <button type="submit" class="subscribe-popoup-button" id="subscribe_popoup_button" name="subscribe_popoup_button">S U B S C R I B E</button>
+            </form>
+        </div>
+        <script>
+            var block_popup = false;
+            function popup() {
+                var divelem = document.querySelector('.subscribe-popup');
+                var block = document.querySelector('.popup-block');
+                divelem.style.display = "flex";
+                block.style.display = "block";
+                
+            }
+            var home_content = document.querySelector('body');
+            var halfPageHeight = home_content.scrollHeight / 2;
+            var currentScrollPosition = home_content.scrollTop;
+            setInterval(() => {
+                if (block_popup === false) {
+                    home_content = document.querySelector('body');
+                    halfPageHeight = home_content.scrollHeight / 2;
+                    currentScrollPosition = home_content.scrollTop;
+                    if (currentScrollPosition > halfPageHeight) {
+                        popup();
+                        
+                }
+                
+            }
+            }, 1000);
+            
+            
+
+            function closediv() {
+                var divelem = document.querySelector('.subscribe-popup');
+                var block = document.querySelector('.popup-block');
+                divelem.style.display = 'none';
+                block.style.display = 'none';
+                block_popup = true;
+                
+            }
+        </script>
+    </div>
+</html>

@@ -1,0 +1,409 @@
+a {
+    text-decoration: none;
+}
+body {
+    position: relative;
+    word-spacing: 5px;
+    background-color: rgb(0, 0, 0);
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+.home-content {
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+    padding: 60px;
+    display: flex;
+    flex-direction: row;
+}
+
+.blogs {
+    word-spacing: normal;
+    width: 100%;
+}
+
+.blog {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 30px;
+    width: 55%;
+}
+
+
+
+.description {
+    display: flex;
+    
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+    color: white;
+    display: flex;
+
+}
+
+.description-text {
+    bottom: 0px;
+}
+
+
+.block1 {
+    height: 60px;
+}
+
+h1 {
+    color: white;
+    font-family: 'IBM Plex Sans JP', sans-serif;
+}
+
+.title h1 {
+    transition-duration: 0.3s;
+    
+}
+
+.title h1:hover {
+    text-decoration: underline;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog .read-post-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    background-color: white;
+    font-size: 15px;
+    border: 2px solid white;
+    padding: 10px;
+    
+    text-decoration: none;
+    color: black;
+    transition-duration: 0.5s;
+}
+
+
+
+.blog .read-post-button:hover {
+    background-color: transparent;
+    color: white;
+}
+
+.blog .read-post-button:hover a {
+    color: white;
+}
+
+.other-info {
+    padding: 10px;
+    position: fixed;
+    right: 10px;
+    width: 500px;   
+    z-index: -1;   
+}
+
+.other-info span {
+    margin-top: 10px;
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+    color: white;
+}
+
+.blog-info a{
+    color: white;
+    font-size: 10px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+.content .subscribe-box {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(132, 30, 2, 0.705);
+    
+    height: 550px;
+    width: 600px;
+    transform: scale(0.7);
+    background-color: rgb(17, 17, 17);
+}
+.subscribe-box-header {
+    position: relative;
+    font-family: 'IBM Plex Sans JP', sans-serif;
+    display: flex;
+    justify-content: center;
+    word-spacing: normal;
+    background-color: rgb(107, 24, 1);
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.377);
+    transition-duration: 0.3s;
+}
+
+
+.subscribe-box-header:hover .subscribe-box-icon-box {
+    color: black;
+}
+.subscribe-box-header:hover .subscribe-box-icon-box-2 {
+    color: black;
+}
+.subscribe-box-header-text {
+    margin: 10px;
+}
+.scifix-logo {
+    font-family: 'IBM Plex Sans JP', sans-serif;
+    font-size: 13px;
+    border: 1px solid white;
+    color: white;
+    padding: 5px;
+    position: absolute;
+    background-color: transparent;
+    bottom: 20;
+    right: 20;
+    transition-duration: 0.3s;
+}
+.scifix-logo:hover {
+    background-color: white;
+    color: black;
+}
+
+.subscribe-button {
+    font-family: 'IBM Plex Sans JP', sans-serif;
+    font-size: 13px;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    position: absolute;
+    background-color: rgb(107, 24, 1);;
+    bottom: 20;
+    left: 20;
+    transition-duration: 0.3s;
+}
+
+.subscribe-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.subscribe-box-form {
+    height: 90%;
+    transition-duration: 0.3s;
+}
+.email-message {
+    display: flex;
+    flex-direction: column;
+}
+.email {
+    width: 100%;
+    margin: 10px;
+}
+.message {
+    width: 100%;
+    margin: 10px;
+}
+form input {
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+    padding: 15px;
+    color: white;
+    border: 1px solid white;
+    
+    background-color: transparent;
+}
+textarea {
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+    padding: 15px;
+    
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+}
+form {
+    margin: 20px;
+}
+
+.email input {
+    margin-top: 30px;
+}
+
+
+.error-message {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    padding: 5px;
+    color: rgba(230, 4, 4, 0.758);
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.blog-image-box1 {
+    display: flex;
+    flex-direction: column-reverse;
+    background: linear-gradient(180deg, rgba(5, 5, 5, 0.251), rgb(5, 5, 5)), url('/blog/media/scifixlogo22.png');
+    padding: 15px;
+    width: 50vw;
+    height: 60vh;
+
+    background-position: center center;
+    background-size: 100%;
+    transition-duration: 0.5s;
+}
+
+.blog-image-box1::before {
+    content: attr(alt);
+}
+
+.blog-image-box1:hover {
+    background-size: 94%;
+    width: 51vw;
+    height: 61vh;
+}
+
+
+.blog-image-box2 {
+    display: flex;
+    flex-direction: column-reverse;
+    background: linear-gradient(180deg, rgba(5, 5, 5, 0.251), rgb(5, 5, 5)), url('/blog/media/earth4.jpg');
+    padding: 15px;
+    width: 50vw;
+    height: 60vh;
+
+    background-position: center center;
+    background-size: 100%;
+    transition-duration: 0.5s;
+}
+
+.blog-image-box2::before {
+    content: attr(alt);
+}
+
+.blog-image-box2:hover {
+    background-size: 94%;
+    width: 51vw;
+    height: 61vh;
+}
+
+.blog-image-box3 {
+    display: flex;
+    flex-direction: column-reverse;
+    background: linear-gradient(180deg, rgba(5, 5, 5, 0.251), rgb(5, 5, 5)), url('/blog/media/atoms_waves.jpg');
+    padding: 15px;
+    width: 50vw;
+    height: 60vh;
+
+    background-position: center center;
+    background-size: 100%;
+    transition-duration: 0.5s;
+}
+
+.blog-image-box3::before {
+    content: attr(alt);
+}
+
+.blog-image-box3:hover {
+    background-size: 94%;
+    width: 51vw;
+    height: 61vh;
+}
+
+.blog-image-box4 {
+    display: flex;
+    flex-direction: column-reverse;
+    background: linear-gradient(180deg, rgba(5, 5, 5, 0.419), rgba(5, 5, 5, 0.879)), url('/blog/media/DART_poster.jpg');
+    padding: 15px;
+    width: 50vw;
+    height: 60vh;
+
+    background-position: center center;
+    background-size: 100%;
+    transition-duration: 0.5s;
+}
+
+.blog-image-box4::before {
+    content: attr(alt);
+}
+
+.blog-image-box4:hover {
+    background-size: 94%;
+    width: 51vw;
+    height: 61vh;
+}
+
+
+
+
+
+
+@media (max-width: 1400px) {
+    .content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .other-info {
+        position: relative;
+        width: auto;
+    }
+    .blog {
+        margin-left: 0px;
+        padding-left: 0px;
+        
+    }
+    .content .subscribe-box {
+        position: relative;
+        bottom: 0;
+        width: 100vw;
+        transform: scale(1);
+        
+    }
+    
+}

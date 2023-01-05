@@ -1,0 +1,264 @@
+<html>
+    <head>
+        <title>SCIFIX</title>
+        <meta charset="utf-8"/>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'blog/post.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@600&family=Lobster&family=Playfair+Display&family=Quicksand:wght@300;700&family=Space+Mono&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        {% include 'blog/nav.html' %}
+        <div class="hover-panel">
+            <ion-icon name="heart" class="heart"></ion-icon>
+            <ion-icon name="bookmark" class="bookmark"></ion-icon>
+
+            
+        </div>
+        <div class="block1"></div>
+        <div class="home-content">
+            <div class="table-of-content">
+                <div class="content-box">
+                    <a href="#introduction">Introduction</a>
+                </div>
+                <div class="content-box">
+                    <a href="#eod">Engineering of DART</a>
+                </div>
+                <div class="content-box">
+                    <a href="#q1">Why did NASA choose the Didymos asteroid system?</a>
+                </div>
+                <div class="content-box">
+                    <a href="#conclusion">Conclusion</a>
+                </div>
+                <div class="content-box">
+                    <a href="#subscription">Subscription</a>
+                </div>
+                <div class="content-box">
+                    <a href="#comment">Comment Section</a>
+                </div>
+            </div>
+            <div class="table-of-content-dummy"></div>
+            <div class="text">
+                <img src="/blog/media/DART_poster.jpg" alt="Earth" class="blog-image" width="100%">
+                
+                <section class="s" id="introduction">
+                    <h2>Introduction</h2>
+                    <p>Over the years, astrophysicists' have continually studied the behaviour and origin of asteroids 
+                        - how they form and orbit - in line with the discovery of mathematician and astronomer <sup>1</sup><mark>Giuseppe Piazzi</mark>. 
+                        As of recent, these studies have been taken a step further due to the formation of the <sup>2</sup><mark>Asteroid Impact & Deflection 
+                        Assessment (AIDA) mission</mark>. The mission is aimed at improving our knowledge and understanding of satellites and asteroids 
+                        - their internal, external, thermophysical, and dynamic properties.</p>
+                    <div class="note-box-2">
+                        <span>1</span>
+                        <div class="note">
+                            <span>Giuseppe Piazzi is a mathematician and astronomer who discovered the first asteroid, now widely known as Ceres.</span>
+                        </div>
+                    </div>
+    
+                    <div class="note-box-2">
+                        <span>2</span>
+                        <div class="note">
+                            <span>The Asteroid Impact & Deflection Assessment (AIDA) mission is a cooperation between European and US space agencies that consists of two separate and independent spacecraft - DART (Double Asteroid Redirection Test) & AIM (Asteroid Impact Monitoring Mission) - that will be launched to a binary asteroid system - the near-Earth asteroid Didymos - to test the kinetic impactor technique to deflect an asteroid.</span>
+                        </div>
+                    </div>
+
+                    
+                    <p>Although this mission consists of two independent but mutual spacecrafts, 
+                        this article takes a closer look at just one of these spacecrafts: 
+                        DART (Double Asteroid Redirection Test). DART will be the first-ever space mission to deflect the trajectory of an 
+                        asteroid system and measure the deflection. </p>
+                    <p>The first ever DART spacecraft was launched on the 24th of November 2021 and collided with the Didymos 
+                        asteroid system on the 26th of September 2022. According to the astrophysics community, the impact of the >300 kg 
+                        spacecraft at 6.25 km/s would change the mutual orbit of the member asteroids.</p>
+                    <p>
+                        Although the AIDA is targeted at a <sup>3</sup><mark>binary asteroid system</mark>, the Dart will be fired at just one of these two asteroids: 
+                        <sup>4</sup><mark>Dimorphos</mark>. The reason for this selective firing is that it is easier to determine the deflection of a <sup>5</sup><mark>moonlet</mark> from our 
+                        ground-based observations or "telescopes". By targeting the smaller member of a binary system, the DART mission produces 
+                        an orbital deflection which is larger and easier to measure than would be the case if DART targeted the larger member or a 
+                        typical, single near-Earth asteroid. DART will return vital data to determine the momentum transfer efficiency of the 
+                        impact. But how exactly did NASA achieve such an impact?
+                    </p>
+
+                    <div class="note-box-2">
+                        <span>3</span>
+                        <div class="note">
+                            <span>A binary asteroid is a system of two asteroids orbiting their common barycenter. The binary nature of 243 Ida was discovered when the Galileo spacecraft flew by the asteroid in 1993. Since then numerous binary asteroids and several triple asteroids have been detected.</span>
+                        </div>
+                    </div>
+                    <div class="note-box-2">
+                        <span>4</span>
+                        <div class="note">
+                            <span>Dimorphos is a minor-planet moon of the near-Earth asteroid Didymos, with which it forms a binary system. It has a diameter of 170 metres (560 ft) and has been characterised as a low-density rubble pile.</span>
+                        </div>
+                    </div>
+                    <div class="note-box-2">
+                        <span>5</span>
+                        <div class="note">
+                            <span>A moonlet, minor moon, is a small natural satellite orbiting a planet, dwarf planet, or another minor planet.</span>
+                        </div>
+                    </div>
+                    
+                </section>
+                <iframe width="470" height="300" src="https://www.youtube.com/embed/9-2QLY_OE7o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <section class="s" id="eod">
+                    <h2>Engineering of DART</h2>
+                    <p>The DART spacecraft is a low-cost spacecraft, hosting just the tools it needs to complete its mission; a high-resolution imager 
+                        <sup>6</sup><mark>(Draco)</mark> is used in spotting its target; an Italian-made camera <sup>7</sup><mark>(LICIACube)</mark> is used to view the impact and result of the 
+                        impact; a propulsion system that takes a solar power approach <sup>8</sup><mark>(NEXT-C)</mark> is used to offer improved performance compared to 
+                        NASA's older propellant system; the spacecraft also contains a hydrazine propellant used for directing the spacecraft and 
+                        can also serve as an emergency thruster in case NEXT-C does not perform as expected. However, even with all these tools in 
+                        place, DART would still be dependent on the Falcon 9 to propel it to space before it begins its independent journey to the 
+                        asteroid system. DART is also accompanied by a low-cost communication system: RLSA.</p>
+
+                    <div class="note-box-2">
+                        <span>6</span>
+                        <div class="note">
+                            <span>DRACO is a high-resolution imager derived from the New Horizons LORRI camera to support navigation and targeting, measure the size and shape of the asteroid target, and determine the impact site of the DART mission.</span>
+                        </div>
+                    </div>
+                    <div class="note-box-2">
+                        <span>7</span>
+                        <div class="note">
+                            <span>LICIACube is a part of the Double Asteroid Redirection Test (DART) mission and carries out observational analysis of the Didymos asteroid binary system. The DART spacecraft deployed LICIACube 15 days prior to the DART impact on Dimorphos. LICIACube captured images of the DART impact and the resulting ejecta cloud.</span>
+                        </div>
+                    </div>
+                    <div class="note-box-2">
+                        <span>8</span>
+                        <div class="note">
+                            <span>NEXT-C is a solar-powered electric propulsion system producing thrust by accelerating ions using electricity. Its solar power is generated by ROSA (Roll-Out Solar Array) - a pair of flexible and rollable wing-like structures which are lighter and more compact than traditional solar arrays.</span>
+                        </div>
+                    </div>
+                    
+                    <p>Though the RLSA can both send and receive data to and from the earth, it was not used to communicate directions to the DART 
+                        spacecraft. This is because the spacecraft will travel beyond a distance where the DART team can receive and send data to it
+                         at reasonable speeds, resulting in lags. Consequently, the DART spacecraft would have to rely on its autonomous navigation 
+                         system - GNC and SMART Nav - to ensure it successfully collides with its target asteroid.</p>
+                    
+                    
+                </section>
+                <iframe width="470" height="300" src="https://www.youtube.com/embed/38MpAZbqMIY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <section class="s" id="q1">
+                    <h2>But why did NASA choose the Didymos asteroid system?</h2>
+                    <p>The binary nature of 243 Ida - an asteroid in the Koronis family of the asteroid belt - was discovered when the Galileo 
+                        spacecraft flew by the asteroid in 1993. Since then, numerous binary asteroids have been detected. Thus, it would be right 
+                        to assert that there are numerous binary asteroids in our solar system. But why did NASA specifically choose the Didymos 
+                        asteroid system for this mission?</p>
+                    <p>For starters, the Didymos system is currently the closest binary asteroid system to earth, which steered up a lot of 
+                        concern for any possible collisions with earth.</p>
+                    <p>More interestingly, NASA was looking for a moonlet that had an <sup>9</sup><mark>eclipsing path</mark>. This is because NASA needs to accurately 
+                        measure the change in its orbit after collision with the DART spacecraft. Using highly sensitive earth-based telescopes, 
+                        NASA can accurately measure the time it takes for the moonlet to complete one revolution around its asteroid before and 
+                        after collision with DART.</p>
+                    
+                    <div class="note-box-2">
+                        <span>9</span>
+                        <div class="note">
+                            <span>For an orbiting moonlet to have an eclipsing path when viewed from earth, it must pass in front and behind the asteroid as it orbits; when the moonlet passes in front of its asteroid, the light dims.</span>
+                        </div>
+                    </div>
+
+                </section>
+                <iframe width="470" height="300" src="https://www.youtube.com/embed/_v4n44qGZ_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <section class="s" id="conclusion">
+                    <h2>Conclusion</h2>
+                    <p>DART provided the first demonstration of asteroid deflection at a low cost. Together with the AIM mission,
+                         the joint mission AIDA provides a full characterization and assessment of the kinetic impact. The results 
+                         of the observation - and many others to come - will have a huge impact on the field of astrophysics, and redefine 
+                         our understanding of the solar system.</p>
+                </section>
+                <section class="s" id="subscription">
+                    <h2>Subscribe for more</h2>
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <input type="email" name="email" id="email" placeholder="someone@example.com">
+                        <button type="submit" name="subscribe_button">S U B S C R I B E</button>
+                    </form>
+                </section>
+                <section class="s comment-section" id="comment">
+                    <h2>Comment - {{ comments | length }}</h2>
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <input type="text" name="comment" id="comment" class="input-comment-box" placeholder="Leave a comment...">
+                        <button type="submit" class="comment-submit-button" name="comment_button"><span>S U B M I T</span></button>
+                    </form>
+                    <div class="comments">
+                        {% for comment in comments %}
+                            <div class="comment">
+                                <div class="comment-info">
+                                    <span class="comment-user">{{ comment.user.username }}</span>
+                                    <span class="comment-time">{{ comment.time }}</span>
+                                </div>
+                                <span class="comment-text">{{ comment.comment_text }}</span>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </section>
+
+            </div>
+            <div class="extra-info">
+                <div class="note-box">
+                    <span>1</span>
+                    <div class="note">
+                        <span>Giuseppe Piazzi is a mathematician and astronomer who discovered the first asteroid, now widely known as Ceres.</span>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <span>2</span>
+                    <div class="note">
+                        <span>The Asteroid Impact & Deflection Assessment (AIDA) mission is a cooperation between European and US space agencies that consists of two separate and independent spacecraft - DART (Double Asteroid Redirection Test) & AIM (Asteroid Impact Monitoring Mission) - that will be launched to a binary asteroid system - the near-Earth asteroid Didymos - to test the kinetic impactor technique to deflect an asteroid.</span>
+                    </div>
+                </div>
+                <div class="note-box">
+                    <span>3</span>
+                    <div class="note">
+                        <span>A binary asteroid is a system of two asteroids orbiting their common barycenter. The binary nature of 243 Ida was discovered when the Galileo spacecraft flew by the asteroid in 1993. Since then numerous binary asteroids and several triple asteroids have been detected.</span>
+                    </div>
+                </div>
+                <div class="note-box">
+                    <span>4</span>
+                    <div class="note">
+                        <span>Dimorphos is a minor-planet moon of the near-Earth asteroid Didymos, with which it forms a binary system. It has a diameter of 170 metres (560 ft) and has been characterised as a low-density rubble pile.</span>
+                    </div>
+                </div>
+                <div class="note-box">
+                    <span>5</span>
+                    <div class="note">
+                        <span>A moonlet, minor moon, is a small natural satellite orbiting a planet, dwarf planet, or another minor planet.</span>
+                    </div>
+                </div>
+                <div class="note-box">
+                    <span>6</span>
+                    <div class="note">
+                        <span>DRACO is a high-resolution imager derived from the New Horizons LORRI camera to support navigation and targeting, measure the size and shape of the asteroid target, and determine the impact site of the DART mission.</span>
+                    </div>
+                </div>
+                <div class="note-box">
+                    <span>7</span>
+                    <div class="note">
+                        <span>LICIACube is a part of the Double Asteroid Redirection Test (DART) mission and carries out observational analysis of the Didymos asteroid binary system. The DART spacecraft deployed LICIACube 15 days prior to the DART impact on Dimorphos. LICIACube captured images of the DART impact and the resulting ejecta cloud.</span>
+                    </div>
+                </div>
+                <div class="note-box">
+                    <span>8</span>
+                    <div class="note">
+                        <span>NEXT-C is a solar-powered electric propulsion system producing thrust by accelerating ions using electricity. Its solar power is generated by ROSA (Roll-Out Solar Array) - a pair of flexible and rollable wing-like structures which are lighter and more compact than traditional solar arrays.</span>
+                    </div>
+                </div>
+                <div class="note-box">
+                    <span>9</span>
+                    <div class="note">
+                        <span>For an orbiting moonlet to have an eclipsing path when viewed from earth, it must pass in front and behind the asteroid as it orbits; when the moonlet passes in front of its asteroid, the light dims.</span>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+        {% include 'blog/footer.html' %}
+        {% include 'blog/subscribe_popup.html' %}
+    </body>
+</html>
