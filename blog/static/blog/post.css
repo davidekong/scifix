@@ -20,6 +20,16 @@ body {
     overflow-x: hidden;
 }
 
+.title {
+    margin: 5px;
+    padding: 10px;
+    width: 100%;
+}
+h1 {
+    font-family: 'IBM Plex Sans JP', sans-serif;
+    font-size: 35px;
+    line-height: 40px;
+}
 
 .home-content {
     font-family: 'Quicksand', sans-serif;
@@ -58,7 +68,7 @@ body {
 .text {
     padding: 10px;
     width: 50%;
-    font-size: 19px;
+    font-size: 21px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -141,7 +151,7 @@ a {
     
     margin: 10px;
     transition-duration: 0.5s;
-    font-size: 12px;
+    font-size: 15px;
     line-height: normal;
 }
 
@@ -181,6 +191,7 @@ form button:hover {
 @media (max-width: 1300px) {
     .extra-info {
         display: none;
+        
     }
     .text {
         width: 80%;
@@ -190,8 +201,11 @@ form button:hover {
     }
     
 }
-@media (max-width: 800px) {
+@media (max-width: 1080px) {
     .table-of-content {
+        display: none;
+    }
+    .table-of-content-dummy {
         display: none;
     }
     .text {
@@ -200,6 +214,18 @@ form button:hover {
     }
     .home-content {
         padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    iframe {
+        margin-left: 20px;
+        width: 600px;
+        height: 410px;
+    }
+    form input {
+        height: 50px;
+        font-size: 18px;
     }
 }
 

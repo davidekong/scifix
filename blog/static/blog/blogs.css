@@ -37,7 +37,7 @@ body {
 .blog {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    
     margin: 30px;
     width: 55%;
 }
@@ -55,6 +55,12 @@ body {
 }
 
 .description-text {
+    font-size: 18px;
+    bottom: 0px;
+}
+
+.blogs .description-text {
+    font-size: 20px;
     bottom: 0px;
 }
 
@@ -63,17 +69,24 @@ body {
     height: 60px;
 }
 
-h1 {
+h2 {
     color: white;
     font-family: 'IBM Plex Sans JP', sans-serif;
 }
 
-.title h1 {
+.title h2 {
+    font-size: 28px;
     transition-duration: 0.3s;
     
 }
 
-.title h1:hover {
+.blogs .title h2 {
+    font-size: 35px;
+    transition-duration: 0.3s;
+    
+}
+
+.title h2:hover {
     text-decoration: underline;
 }
 
@@ -84,26 +97,26 @@ h1 {
     align-items: center;
 }
 
-.blog .read-post-button {
+.blogs .read-post-button {
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Quicksand', sans-serif;
-    background-color: white;
-    font-size: 15px;
+    background-color: transparent;
+    font-size: 17px;
     border: 2px solid white;
     padding: 10px;
     
     text-decoration: none;
-    color: black;
+    color: white;
     transition-duration: 0.5s;
 }
 
 
 
 .blog .read-post-button:hover {
-    background-color: transparent;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 .blog .read-post-button:hover a {
@@ -127,7 +140,7 @@ h1 {
 
 .blog-info a{
     color: white;
-    font-size: 10px;
+    font-size: 15px;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -227,20 +240,22 @@ form input {
     padding: 15px;
     color: white;
     border: 1px solid white;
-    
+    font-size: 17px;
     background-color: transparent;
 }
 textarea {
     font-family: 'Quicksand', sans-serif;
     width: 100%;
+    height: 100px;
     padding: 15px;
-    
+    font-size: 17px;
     color: white;
     border: 1px solid white;
     background-color: transparent;
 }
 form {
     margin: 20px;
+    
 }
 
 .email input {
@@ -292,7 +307,7 @@ form {
     background: linear-gradient(180deg, rgba(5, 5, 5, 0.251), rgb(5, 5, 5)), url('/media/scifixlogo22.png');
     padding: 15px;
     width: 50vw;
-    height: 60vh;
+    height: 65vh;
 
     background-position: center center;
     background-size: 100%;
@@ -306,7 +321,7 @@ form {
 .blog-image-box1:hover {
     background-size: 94%;
     width: 51vw;
-    height: 61vh;
+    height: 66vh;
 }
 
 
@@ -316,7 +331,7 @@ form {
     background: linear-gradient(180deg, rgba(5, 5, 5, 0.251), rgb(5, 5, 5)), url('/media/earth4.jpg');
     padding: 15px;
     width: 50vw;
-    height: 60vh;
+    height: 65vh;
 
     background-position: center center;
     background-size: 100%;
@@ -330,7 +345,7 @@ form {
 .blog-image-box2:hover {
     background-size: 94%;
     width: 51vw;
-    height: 61vh;
+    height: 66vh;
 }
 
 .blog-image-box3 {
@@ -339,7 +354,7 @@ form {
     background: linear-gradient(180deg, rgba(5, 5, 5, 0.251), rgb(5, 5, 5)), url('/media/atoms_waves.jpg');
     padding: 15px;
     width: 50vw;
-    height: 60vh;
+    height: 65vh;
 
     background-position: center center;
     background-size: 100%;
@@ -353,7 +368,7 @@ form {
 .blog-image-box3:hover {
     background-size: 94%;
     width: 51vw;
-    height: 61vh;
+    height: 66vh;
 }
 
 .blog-image-box4 {
@@ -362,7 +377,7 @@ form {
     background: linear-gradient(180deg, rgba(5, 5, 5, 0.419), rgba(5, 5, 5, 0.879)), url('/media/DART_poster.jpg');
     padding: 15px;
     width: 50vw;
-    height: 60vh;
+    height: 65vh;
 
     background-position: center center;
     background-size: 100%;
@@ -376,7 +391,7 @@ form {
 .blog-image-box4:hover {
     background-size: 94%;
     width: 51vw;
-    height: 61vh;
+    height: 66vh;
 }
 
 
@@ -406,4 +421,42 @@ form {
         
     }
     
+}
+
+
+@media (max-width: 1080px) {
+    textarea {
+        font-family: 'Quicksand', sans-serif;
+        width: 90vw;
+        padding: 15px;
+        height: 100px;
+        color: white;
+        border: 1px solid white;
+        background-color: transparent;
+    }
+    form {
+        margin: 20px;
+    }
+    
+    .email input {
+        font-family: 'Quicksand', sans-serif;
+        padding: 15px;
+        margin-bottom:30px;
+        color: white;
+        border: 1px solid white;
+        background-color: transparent;
+        width: 90vw;
+    }
+    
+    
+    .error-message {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+        padding: 5px;
+        color: rgba(230, 4, 4, 0.758);
+        font-family: 'Quicksand', sans-serif;
+    }
 }

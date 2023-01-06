@@ -3,8 +3,11 @@
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <link rel="icon" href="/media/planet.svg" type="image/svg">
-        <title>SCIFIX</title>
+        <title>SCIFIX - Community for Science, Technology and Culture</title>
         <meta charset="utf-8"/>
+        <meta name="description" content="Information regarding the latest developments in the field of science and technology as well as their effects on the human society.">
+        <meta name="keywords" content="SCIFIX, science, culture, NASA, MIT">
+        <meta name="author" content="David Ekong">
         {% load static %}
         <link rel="stylesheet" href="{% static 'blog/style1.css' %}">
         <link rel="stylesheet" href="{% static 'blog/blogs.css' %}">
@@ -14,30 +17,23 @@
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@600&family=Josefin+Sans&family=Lobster&family=Nanum+Myeongjo&family=Playfair+Display:ital,wght@0,400;1,500&family=Quicksand:wght@300;700&family=Space+Mono&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     </head>
     <body>
-        {% comment "" %}
-        {% if user.is_authenticated %}
-        {% endcomment %}
+        
         
         
         {% include 'blog/nav.html' %}
         
-        <div class="hover-info photoreceptors">
-            <span class="hover-span">A photoreceptor cell is a specialized type of cell that can carry out Phototransduction - the process of converting light (visible electromagnetic radiation) into signals (nerve impulses) that can stimulate biological processes.</span>
-        </div>
-        <div class="hover-info multispectral">
-            <span class="hover-span">Multispectral imaging captures image data within specific wavelength ranges across the electromagnetic spectrum.</span>
-        </div>
+        
         <div class="home-content">
             <div class="block1"></div>
             <div class="b12">
                 <div class="box1">
                     <div class="box1-text">
                         <div class="box1-head">
-                            <h1>This is </h1><h2 class="scifix-block">S C I F I X</h2>
+                            <h2>This is</h2><h2 class="scifix-block">S C I F I X</h2>
                         </div>
                         <p class="box1-text-body"><span class="big">W</span>elcome to <span class="scifix-block-span">S C I F I X</span>, a blog that explores the intersection of science, arts, and culture!
 
-                            At <span class="scifix-block-span">S C I F I X</span>, we believe that science and the arts are not mutually exclusive, but rather complementary disciplines that can inform and enrich each other. We are passionate about sharing content that highlights the ways in which science and the arts intersect and interact, and we aim to provide a platform for discussion and exploration of this fascinating and important topic. 
+                            At <span class="scifix-block-span">S C I F I X</span>, we believe that <strong>science</strong> and the arts are not mutually exclusive, but rather complementary disciplines that can inform and enrich each other. We are passionate about sharing content that highlights the ways in which science and the arts intersect and interact, and we aim to provide a platform for discussion and exploration of this fascinating and important topic. 
                             From discussions of the latest scientific research to explorations of the cultural significance of science and the arts, we strive to provide a diverse and thought-provoking range of content for our readers.</p>
                             
                     </div>
@@ -48,44 +44,27 @@
                 <div class="box2">
                     <h2 class="scifix-block">S C I F I X</h2><span>is</span><h2 class="sci">SCIENCE</h2><span>&</span><h2 class="cul">CULTURE</h2>
                 </div>
-                <style>
-                    @media (max-width: 1000px) {
-                        .box2 {
-                            flex-direction: column;
-                        }
-                        .box1 {
-                            
-                            flex-direction: column;
-                            padding: 2px;
-                            margin: 2px;
-                        }
-                        .box1-text {
-                            padding: 2px;
-                            margin: 2px;
-                        }
-                        .box1-image img {
-                            width: 100vw;
-                            height: 100vw;
-                        }
-                        .b12 {
-                            margin-top: 120px;
-                        }
-                    }
-                </style>
+                
+            </div>
+            <div class="hover-info photoreceptors">
+                <span class="hover-span">A photoreceptor cell is a specialized type of cell that can carry out Phototransduction - the process of converting light (visible electromagnetic radiation) into signals (nerve impulses) that can stimulate biological processes.</span>
+            </div>
+            <div class="hover-info multispectral">
+                <span class="hover-span">Multispectral imaging captures image data within specific wavelength ranges across the electromagnetic spectrum.</span>
             </div>
             <div class="fun-facts-phone">
                 <div class="fact-phone">
                     <div class="fact-phone-image mantis" alt="Mantis Shrimp">
                         
-                        <h1>Mantis Shrimp</h1>
+                        <h2>Mantis Shrimp</h2>
                         
                     </div>
                     <div class="fact-phone-text">
-                        <h1 class="dyk-phone"><ion-icon name="bulb-outline" class="fact-bulb" onclick="changeColor()"></ion-icon>Did you know?</h1>
+                        <h2 class="dyk-phone"><ion-icon name="bulb-outline" class="fact-bulb" onclick="changeColor()"></ion-icon>Did you know?</h2>
                         <span class="fact-text-phone">The Mantis shrimp has the most complex eyes in the animal kingdom, with up to 16 types of <span class="mark" onmousemove="display('photoreceptors')" onmouseout="hide('photoreceptors')">photoreceptors</span>. They are also capable of seeing circular polarized light and <span class="mark" onmousemove="display('multispectral')" onmouseout="hide('multispectral')">multispectral</span> images. Some species of mantis shrimp can even see ultraviolet and infrared light, which is outside of the visible spectrum for humans. The mantis shrimp's eyes are mounted on movable stalks, which allow them to independently focus on two different objects at the same time. They are also known for their powerful claws, which they use to attack and kill prey.</span>
                     </div>
                     <style>
-                        .mantis h1 {
+                        .mantis h2 {
                             color: transparent;
                             width: 100%;
                             backdrop-filter: blur(0px);
@@ -108,7 +87,7 @@
                             content: attr(alt);
                         }
 
-                        .mantis h1:hover {
+                        .mantis h2:hover {
                             color: white;
                             backdrop-filter: blur(2px);
                         }
@@ -117,11 +96,11 @@
                 <div class="fact-phone">
                     <div class="fact-phone-image bloodhound" alt="Bloodhound">
                         
-                        <h1>Bloodhound</h1>
+                        <h2>Bloodhound</h2>
                         
                     </div>
                     <div class="fact-phone-text">
-                        <h1 class="dyk-phone"><ion-icon name="bulb-outline" class="fact-bulb" onclick="changeColor()"></ion-icon>Did you know?</h1>
+                        <h2 class="dyk-phone"><ion-icon name="bulb-outline" class="fact-bulb" onclick="changeColor()"></ion-icon>Did you know?</h2>
                         <span class="fact-text-phone">The bloodhound is a breed of dog known for its keen sense of smell and ability to track scents over long distances. They have been used for centuries to track humans and animals, and are still used today by law enforcement agencies and search and rescue teams to locate missing people.
 
                             Bloodhounds are bred specifically for their sense of smell, which is thought to be up to 100 times more sensitive than a human's. They have a long, drooping face and large nostrils that help them draw in more air and pick up on faint scents. They are also able to follow a scent trail that is days or even weeks old, and can even track a person's scent through water and across a variety of terrain.
@@ -132,7 +111,7 @@
                         </span>
                     </div>
                     <style>
-                        .bloodhound h1 {
+                        .bloodhound h2 {
                             color: transparent;
                             width: 100%;
                             backdrop-filter: blur(0px);
@@ -155,7 +134,7 @@
                             content: attr(alt);
                         }
 
-                        .bloodhound h1:hover {
+                        .bloodhound h2:hover {
                             color: white;
                             backdrop-filter: blur(2px);
                         }
@@ -169,18 +148,18 @@
                     <div class="fact-body">
                         
                         <div class="fact-box-text">
-                            <h1 class="dyk"><ion-icon name="bulb-outline" class="fact-bulb" onclick="changeColor()"></ion-icon>Did you know?</h1>
+                            <h2 class="dyk"><ion-icon name="bulb-outline" class="fact-bulb" onclick="changeColor()"></ion-icon>Did you know?</h2>
                             <span class="fact-text">The Mantis shrimp has the most complex eyes in the animal kingdom, with up to 16 types of <span class="mark" onmousemove="display('photoreceptors')" onmouseout="hide('photoreceptors')">photoreceptors</span>. They are also capable of seeing circular polarized light and <span class="mark" onmousemove="display('multispectral')" onmouseout="hide('multispectral')">multispectral</span> images. Some species of mantis shrimp can even see ultraviolet and infrared light, which is outside of the visible spectrum for humans. The mantis shrimp's eyes are mounted on movable stalks, which allow them to independently focus on two different objects at the same time. They are also known for their powerful claws, which they use to attack and kill prey.</span>
                         </div>
                         <div class="fact-box-image mantis" alt="Mantis Shrimp">
-                            <h1>Mantis Shrimp</h1>
+                            <h2>Mantis Shrimp</h2>
                         </div>
                     </div>
                     <div onclick="scrollToNext()" class="fact-next"><span><b>N</b></span><span><b>E</b></span><span><b>X</b></span><span><b>T</b></span></div>
                 </div>
                 
                 <style>
-                    .mantis h1 {
+                    .mantis h2 {
                         color: transparent;
                         width: 100%;
                         backdrop-filter: blur(0px);
@@ -203,7 +182,7 @@
                         content: attr(alt);
                     }
 
-                    .mantis h1:hover {
+                    .mantis h2:hover {
                         color: white;
                         backdrop-filter: blur(2px);
                     }
@@ -212,7 +191,7 @@
                     <div onclick="scrollToPrev()" class="fact-back"><span><b>B</b></span><span><b>A</b></span><span><b>C</b></span><span><b>K</b></span></div>
                     <div class="fact-body">
                         <div class="fact-box-text">
-                            <h1 class="dyk"><ion-icon name="bulb-outline" class="fact-bulb" onclick="changeColor()"></ion-icon>Did you know?</h1>
+                            <h2 class="dyk"><ion-icon name="bulb-outline" class="fact-bulb" onclick="changeColor()"></ion-icon>Did you know?</h2>
                             <span class="fact-text">The bloodhound is a breed of dog known for its keen sense of smell and ability to track scents over long distances. They have been used for centuries to track humans and animals, and are still used today by law enforcement agencies and search and rescue teams to locate missing people.
 
                                 Bloodhounds are bred specifically for their sense of smell, which is thought to be up to 100 times more sensitive than a human's. They have a long, drooping face and large nostrils that help them draw in more air and pick up on faint scents. They are also able to follow a scent trail that is days or even weeks old, and can even track a person's scent through water and across a variety of terrain.
@@ -221,13 +200,13 @@
                             </span>
                         </div>
                         <div class="fact-box-image bloodhound" alt="Bloodhound">
-                            <h1>Bloodhound</h1>
+                            <h2>Bloodhound</h2>
                         </div>
                     </div>
                     <div onclick="scrollToNext()" class="fact-next"><span><b>N</b></span><span><b>E</b></span><span><b>X</b></span><span><b>T</b></span></div>
                 </div>
                 <style>
-                    .bloodhound h1 {
+                    .bloodhound h2 {
                         color: transparent;
                         width: 100%;
                         backdrop-filter: blur(0px);
@@ -250,7 +229,7 @@
                         content: attr(alt);
                     }
 
-                    .bloodhound h1:hover {
+                    .bloodhound h2:hover {
                         color: white;
                         backdrop-filter: blur(2px);
                     }
@@ -368,7 +347,7 @@
                         <span class="daily-quote-person">Craig Venter</span>
                     </div>
                     <div class="spotlight">
-                        <h1><span class="scifix-block">S C I F I X</span> Spotlight</h1>
+                        <h2><span class="scifix-block">S C I F I X</span> Spotlight</h2>
                         <div class="blog">
                             <div class="blog-image-box2 blog-image-box" alt="earth">
                                 <div class="description">
@@ -376,7 +355,7 @@
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, sit modi! Praesentium similique laborum voluptas voluptate culpa.
                                 </div>
                                 <div class="title">
-                                    <a href="#"><h1>Welcome to Earth</h1></a>
+                                    <a href="#"><h2>Welcome to Earth</h2></a>
                                     <a href="#"><div class="read-post-button">Read Post</div></a>
                                 </div>
                                 <div class="blog-info">
@@ -425,7 +404,7 @@
                 </div>
                 
                 <div class="box3-right">
-                    <h1><span class="scifix-block">S C I F I X</span> Latest News</h1>
+                    <h2><span class="scifix-block">S C I F I X</span> Latest News</h2>
                     <div class="organizations">
                         <div class="organizations-options">
                             <div class="option">

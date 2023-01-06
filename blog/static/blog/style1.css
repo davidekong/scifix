@@ -20,6 +20,7 @@ body {
     padding: 0px;
     margin: 0px;
     width: 100vw;
+    scroll-behavior: smooth;
     overflow-x: hidden;
 }
 
@@ -40,6 +41,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    color: white;
 }
 
 .scifix-block {
@@ -63,19 +65,14 @@ body {
 
 .box1-text {
     width: 50%;
-    padding: 10px;
+    font-size: 18px;
     margin: 10px;
 }
-@media (max-width: 900px) {
-    .box1-text {
-        width: 80%;
-        
-    }
-}
 
-.box1-head h1 {
+
+.box1-head h2 {
     font-family: 'IBM Plex Sans JP', sans-serif;
-    color: white;
+    
     margin-right: 10px;
 }
 
@@ -176,7 +173,7 @@ body {
 
 
 
-.box3 h1 {
+.box3 h2 {
     color: white;
     font-family: 'IBM Plex Sans JP', sans-serif;
 }
@@ -315,7 +312,7 @@ body {
     position: relative;
     height: 100%;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -349,7 +346,7 @@ body {
     width: 70%;
     position: relative;
     word-spacing: normal;
-    font-size: 17px;
+    font-size: 18px;
 
 }
 
@@ -407,7 +404,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 15px;
+    font-size: 20px;
     height: 60%;
     padding: 5px;
     background-color: white;
@@ -484,11 +481,10 @@ body {
     padding: 15px;
     border: 2px solid white;
     transition-duration: 0.5s;
-    
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     .daily-quote {
       height: 250px;
     }
@@ -497,6 +493,28 @@ body {
     }
     .fun-facts-phone {
         display: flex;
+    }
+    .box2 {
+        flex-direction: column;
+    }
+    .box1 {
+        
+        flex-direction: column;
+        padding: 2px;
+        margin: 2px;
+        
+    }
+    .box1-text {
+        padding: 2px;
+        margin: 2px;
+        width: 80%;
+    }
+    .box1-image img {
+        width: 100vw;
+        height: 100vw;
+    }
+    .b12 {
+        margin-top: 160px;
     }
   }
   
@@ -512,7 +530,7 @@ body {
 
 .daily-quote-person {
     margin-left: 10px;
-    font-size: 25px;
+    font-size: 22px;
     font-style: italic;
 }
 
@@ -604,7 +622,7 @@ body {
 .news-text-blob {
     text-decoration: none;
     word-spacing: normal;
-    font-size: 13px;
+    font-size: 16px;
 
 }
 
@@ -624,21 +642,20 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Quicksand', sans-serif;
-    background-color: white;
     font-size: 15px;
     border: 1px solid white;
     padding: 5px;
-    font-size: 13px;
+    font-size: 14px;
     
-    background-color: white;
-    color: black;
+    background-color: transparent;
+    color: white;
     transition-duration: 0.5s;
 }
 
 
 .read-post-button:hover {
-    background-color: transparent;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 .news-bottom {
@@ -721,10 +738,14 @@ body {
 }
 .subscribe-box-header-text {
     margin: 10px;
+    color: white;
+}
+.subscribe-box-header:hover .subscribe-box-header-text {
+    color: rgb(107, 24, 1);
 }
 .scifix-logo {
     font-family: 'IBM Plex Sans JP', sans-serif;
-    font-size: 13px;
+    font-size: 15px;
     border: 1px solid white;
     color: white;
     padding: 5px;
@@ -741,7 +762,7 @@ body {
 
 .subscribe-button {
     font-family: 'IBM Plex Sans JP', sans-serif;
-    font-size: 13px;
+    font-size: 15px;
     border: none;
     color: rgb(0, 0, 0);
     padding: 5px;
@@ -779,20 +800,21 @@ form input {
     padding: 15px;
     color: white;
     border: 1px solid white;
-    
+    font-size: 17px;
     background-color: transparent;
 }
 textarea {
     font-family: 'Quicksand', sans-serif;
     width: 100%;
     padding: 15px;
-    
+    font-size: 17px;
     color: white;
     border: 1px solid white;
     background-color: transparent;
 }
 form {
     margin: 20px;
+    font-size: 17px;
 }
 
 .email input {
@@ -811,3 +833,39 @@ form {
     font-family: 'Quicksand', sans-serif;
 }
 
+@media (max-width: 1080px) {
+    textarea {
+        font-family: 'Quicksand', sans-serif;
+        width: 90vw;
+        padding: 15px;
+        height: 100px;
+        color: white;
+        border: 1px solid white;
+        background-color: transparent;
+    }
+    form {
+        margin: 20px;
+    }
+    
+    .email input {
+        font-family: 'Quicksand', sans-serif;
+        padding: 15px;
+        margin-bottom:30px;
+        color: white;
+        border: 1px solid white;
+        background-color: transparent;
+        width: 90vw;
+    }
+    
+    
+    .error-message {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+        padding: 5px;
+        color: rgba(230, 4, 4, 0.758);
+        font-family: 'Quicksand', sans-serif;
+    }
+}
