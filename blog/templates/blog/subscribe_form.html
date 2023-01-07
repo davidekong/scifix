@@ -1,0 +1,50 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'blog/subscribe_form.css' %}">
+<div class="subscribe-box">
+    <div class="subscribe-box-header">
+        <div class="subscribe-box-icon-box" onclick="minsub()">
+            <ion-icon name="chevron-down-outline"></ion-icon>
+        </div>
+        
+        <h2 class="subscribe-box-header-text">Subscribe - It's Free</h2>
+        
+        
+    </div>
+    <form action="" method="post" class="subscribe-box-form">
+        {% csrf_token %}
+        <div class="email-message">
+            <div class="email">
+                <input type="email" name="email1" id="email1" placeholder="someone@example.com" value={{ user.email }}>
+                <input type="email" name="email2" id="email2" placeholder="Confirm Email" class="cofirm-email">
+            </div>
+            <div class="message">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="What made you want more?"></textarea>
+            </div>
+        </div>
+        <button class="subscribe-button" type="submit" name="subscribe_button" id="subscribe_button"><span>S U B S C R I B E</span></button>
+    </form>
+    
+</div>
+<script>
+    function minsub() {
+        sub_form = document.querySelector(".subscribe-box-form")
+        sub_form.style.display = "none";
+        document.querySelector(".subscribe-box-icon-box").style.display = "none";
+        document.querySelector(".subscribe-box-icon-box-2").style.display = "flex";
+        sub_head = document.querySelector(".subscribe-box-header")
+        sub_head.style.height = "100%";
+        sub = document.querySelector(".subscribe-box")
+        sub.style.height = "55px";
+    }
+    function maxsub() {
+        sub_form = document.querySelector(".subscribe-box-form")
+        sub_form.style.display = "flex";
+
+        document.querySelector(".subscribe-box-icon-box").style.display = "flex";
+        document.querySelector(".subscribe-box-icon-box-2").style.display = "none";
+        sub_head = document.querySelector(".subscribe-box-header")
+        sub_head.style.height = "10%";
+        sub = document.querySelector(".subscribe-box")
+        sub.style.height = "550px";
+    }
+</script>

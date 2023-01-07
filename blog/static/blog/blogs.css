@@ -2,7 +2,7 @@ a {
     text-decoration: none;
 }
 body {
-    position: relative;
+
     word-spacing: 5px;
     background-color: rgb(0, 0, 0);
     padding: 0px;
@@ -24,7 +24,9 @@ body {
 }
 
 .content {
-    padding: 60px;
+    position: relative;
+    top: 100;
+    padding: 20px;
     display: flex;
     flex-direction: row;
 }
@@ -50,7 +52,7 @@ body {
     font-family: 'Quicksand', sans-serif;
     width: 100%;
     color: white;
-    display: flex;
+
 
 }
 
@@ -81,7 +83,7 @@ h2 {
 }
 
 .blogs .title h2 {
-    font-size: 35px;
+    font-size: 30px;
     transition-duration: 0.3s;
     
 }
@@ -403,6 +405,7 @@ form {
     .content {
         flex-direction: column-reverse;
         align-items: center;
+        
     }
     .other-info {
         position: relative;

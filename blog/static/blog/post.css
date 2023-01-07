@@ -17,13 +17,13 @@ body {
     padding: 0px;
     margin: 0px;
     color: white;
-    overflow-x: hidden;
+    
 }
 
 .title {
     margin: 5px;
     padding: 10px;
-    width: 100%;
+    width: 100vw;
 }
 h1 {
     font-family: 'IBM Plex Sans JP', sans-serif;
@@ -36,7 +36,7 @@ h1 {
     display: flex;
     flex-direction: row;
     color: white;
-    padding: 30px;
+    
 }
 
 
@@ -44,6 +44,7 @@ h1 {
 
 ::-webkit-scrollbar {
     width: 0px;
+    display: none;
 }
 
 .block1 {
@@ -66,12 +67,10 @@ h1 {
 }
 
 .text {
-    padding: 10px;
+    padding: 5px;
     width: 50%;
-    font-size: 21px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    font-size: 18px;
+    
     margin: 5px;
     line-height: 150%;
 }
@@ -90,7 +89,7 @@ h1 {
 }
 
 .content-box {
-    padding: 5px;
+
     margin: 5px;
     
 }
@@ -188,7 +187,7 @@ form button:hover {
 
 
 
-@media (max-width: 1300px) {
+@media (max-width: 1000px) {
     .extra-info {
         display: none;
         
@@ -201,7 +200,7 @@ form button:hover {
     }
     
 }
-@media (max-width: 1080px) {
+@media (max-width: 800px) {
     .table-of-content {
         display: none;
     }
@@ -209,7 +208,7 @@ form button:hover {
         display: none;
     }
     .text {
-        width: 100%;
+        width: 100vw;
         padding: 0px;
     }
     .home-content {
@@ -220,8 +219,8 @@ form button:hover {
     }
     iframe {
         margin-left: 20px;
-        width: 600px;
-        height: 410px;
+        width: 90vw;
+        height: 40vh;
     }
     form input {
         height: 50px;

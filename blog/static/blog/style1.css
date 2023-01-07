@@ -12,22 +12,28 @@
 a {
     text-decoration: none;
 }
-
 body {
-    position: relative;
+    width: 100vw;
     word-spacing: 5px;
     background-color: rgb(0, 0, 0);
     padding: 0px;
     margin: 0px;
-    width: 100vw;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
+}
+
+
+.home-content {
+    position: relative;
+    top: 100;
+    font-family: 'Quicksand', sans-serif;
+    
 }
 
 
 
-.home-content {
-    font-family: 'Quicksand', sans-serif;
+
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -86,8 +92,8 @@ body {
     
     display: flex;
     justify-content: center;
-    width: 50%;
-    height: 400px;
+    width: 50vw;
+    height: 50vh;
     padding: 10px;
     margin: 10px;
 }
@@ -404,7 +410,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 17px;
     height: 60%;
     padding: 5px;
     background-color: white;
@@ -484,16 +490,31 @@ body {
 }
 
 
+
+  
+
+.daily-quote:hover {
+    color: black;
+    background-color: white;
+}
+
+.daily-quote-body {
+    font-size: 15px;
+}
+
+.daily-quote-person {
+    margin-left: 10px;
+    font-size: 22px;
+    font-style: italic;
+}
 @media (max-width: 1000px) {
     .daily-quote {
       height: 250px;
     }
-    .fun-facts {
-        display: none;
+    .daily-quote-body {
+        font-size: 15px;
     }
-    .fun-facts-phone {
-        display: flex;
-    }
+    
     .box2 {
         flex-direction: column;
     }
@@ -517,30 +538,50 @@ body {
         margin-top: 160px;
     }
   }
-  
 
-.daily-quote:hover {
-    color: black;
-    background-color: white;
+@media (max-width: 800px) {
+    .daily-quote-body {
+        font-size: 13px;
+    }
+    .daily-quote-person {
+        font-size: 17px;
+        margin-left: 5px;
+    }
+    .daily-quote {
+        height: fit-content;
+    }
 }
-
-.daily-quote-body {
-    font-size: 15px;
+@media (max-width: 650px) {
+    .fun-facts {
+        display: none;
+    }
+    .fun-facts-phone {
+        display: flex;
+    }
 }
-
-.daily-quote-person {
-    margin-left: 10px;
-    font-size: 22px;
-    font-style: italic;
-}
-
 
 .spotlight {
     margin-top: 50px;
     padding: 5px;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
+.spotlight h2 {
+    line-height: 200%;
+}
+.spotlight .scifix-block {
+    font-size: 18px;
+    padding: 5px;
+}
 
+
+
+.box3-right h2 {
+    line-height: 200%;
+}
+.box3-right .scifix-block {
+    font-size: 18px;
+    padding: 5px;
+}
 
 
 .organizations-options {
@@ -569,11 +610,10 @@ body {
 
 .news {
     font-family: 'Quicksand', sans-serif;
-    height: 150px;
+    
     margin: 10px;
     display: flex;
     flex-direction: row;
-    
     color: white;
     padding: 10px;
     padding-top: 20px;
@@ -667,205 +707,15 @@ body {
 }
 
 
-
-
-
-.subscribe-box {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-bottom: 1px solid rgba(132, 30, 2, 0.705);
-    
-    height: 550px;
-    background-color: rgb(17, 17, 17);
-}
-.subscribe-box-header {
-    position: relative;
-    font-family: 'IBM Plex Sans JP', sans-serif;
-    display: flex;
-    justify-content: center;
-    word-spacing: normal;
-    background-color: rgb(107, 24, 1);
-    align-items: center;
-    width: 100%;
-    height: 10%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.377);
-    transition-duration: 0.3s;
-}
-.subscribe-box-icon-box {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 105%;
-    
-    font-size: 20px;
-    color: white;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition-duration: 0.3s;
-}
-
-.subscribe-box-icon-box-2 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 105%;
-    
-    font-size: 20px;
-    color: white;
-
-    display: none;
-    justify-content: center;
-    align-items: center;
-    transition-duration: 0.3s;
-}
-.subscribe-box-header:hover {
-    background-color: white;
-    color: rgb(107, 24, 1);
-}
-.subscribe-box-header:hover .subscribe-box-icon-box {
-    color: black;
-}
-.subscribe-box-header:hover .subscribe-box-icon-box-2 {
-    color: black;
-}
-.subscribe-box-header-text {
-    margin: 10px;
-    color: white;
-}
-.subscribe-box-header:hover .subscribe-box-header-text {
-    color: rgb(107, 24, 1);
-}
-.scifix-logo {
-    font-family: 'IBM Plex Sans JP', sans-serif;
-    font-size: 15px;
-    border: 1px solid white;
-    color: white;
-    padding: 5px;
-    position: absolute;
-    background-color: transparent;
-    bottom: 20;
-    right: 20;
-    transition-duration: 0.3s;
-}
-.scifix-logo:hover {
-    background-color: white;
-    color: black;
-}
-
-.subscribe-button {
-    font-family: 'IBM Plex Sans JP', sans-serif;
-    font-size: 15px;
-    border: none;
-    color: rgb(0, 0, 0);
-    padding: 5px;
-    position: absolute;
-    background-color: rgb(107, 24, 1);;
-    bottom: 20;
-    left: 20;
-    transition-duration: 0.3s;
-}
-
-.subscribe-button:hover {
-    background-color: white;
-    color: black;
-}
-
-.subscribe-box-form {
-    height: 90%;
-    transition-duration: 0.3s;
-}
-.email-message {
-    display: flex;
-    flex-direction: column;
-}
-.email {
-    width: 100%;
-    margin: 10px;
-}
-.message {
-    width: 100%;
-    margin: 10px;
-}
-form input {
-    font-family: 'Quicksand', sans-serif;
-    width: 100%;
-    padding: 15px;
-    color: white;
-    border: 1px solid white;
-    font-size: 17px;
-    background-color: transparent;
-}
-textarea {
-    font-family: 'Quicksand', sans-serif;
-    width: 100%;
-    padding: 15px;
-    font-size: 17px;
-    color: white;
-    border: 1px solid white;
-    background-color: transparent;
-}
-form {
-    margin: 20px;
-    font-size: 17px;
-}
-
-.email input {
-    margin-top: 30px;
-}
-
-
-.error-message {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 13px;
-    padding: 5px;
-    color: rgba(230, 4, 4, 0.758);
-    font-family: 'Quicksand', sans-serif;
-}
-
 @media (max-width: 1080px) {
-    textarea {
-        font-family: 'Quicksand', sans-serif;
-        width: 90vw;
-        padding: 15px;
-        height: 100px;
-        color: white;
-        border: 1px solid white;
-        background-color: transparent;
-    }
-    form {
-        margin: 20px;
-    }
-    
-    .email input {
-        font-family: 'Quicksand', sans-serif;
-        padding: 15px;
-        margin-bottom:30px;
-        color: white;
-        border: 1px solid white;
-        background-color: transparent;
-        width: 90vw;
-    }
-    
-    
-    .error-message {
-        width: 100%;
-        display: flex;
-        justify-content: center;
+    .news {
+        flex-direction: column;
         align-items: center;
-        font-size: 13px;
-        padding: 5px;
-        color: rgba(230, 4, 4, 0.758);
-        font-family: 'Quicksand', sans-serif;
+        width: 60vw;
+    }
+    .news-image-raw {
+        width: 100%;
     }
 }
+
+

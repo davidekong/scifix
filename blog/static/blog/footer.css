@@ -1,19 +1,21 @@
 footer {
-    width: 100%;
+    display: flex;
     font-family: 'Quicksand', sans-serif;
     z-index: 2;
+    height: fit-content;
     background-color: rgb(16, 16, 16);
     color: #fff;
-    padding: 20px;
+    padding: 10px;
     transition-duration: 0.3s;
 }
   
 
 .container {
-  max-width: 70%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -23,14 +25,17 @@ footer p {
 }
 
 footer ul {
+  width: 60%;
+
   list-style: none;
-  margin: 0;
+  margin-bottom: 30px;
   padding: 0;
   display: flex;
+  justify-content: space-between;
 }
 
 footer li {
-  margin-left: 30px;
+  
   word-spacing: normal;
 }
 
@@ -45,8 +50,8 @@ footer a:hover {
 
 
 .social-links li {
-  margin-left: 10px;
-  font-size: 25px;
+  
+  font-size: 30px;
 }
 
 
@@ -77,12 +82,9 @@ footer a:hover {
   footer {
     font-size: 13px;
   }
-  .follow-us i {
-    font-size: 13px;
-  }
+  
   .social-links li {
-    font-size: 15px;
-    font-size: 15px;
+    font-size: 20px;
     
   }
   .pr-po {

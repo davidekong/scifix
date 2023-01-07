@@ -2,6 +2,7 @@
     <head>
         <title>SCIFIX - The community for science and culture</title>
         <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         {% load static %}
         <link rel="icon" href="/media/planet.svg" type="image/svg">
         <link rel="stylesheet" href="{% static 'blog/style1.css' %}">
@@ -15,6 +16,7 @@
         {% include 'blog/nav.html' %}
         <div class="block1"></div>
         <div class="middle">
+            
             <div class="middle-header">
                 <h2 class="middle-header-text">Login</h2>
                 
@@ -42,6 +44,10 @@
         </div>
 
         <style>
+            .block1 {
+                width: 100%;
+                height: 60px;
+            }
             .link {
                 margin-top: 10px;
                 font-size: 13px;
@@ -90,14 +96,7 @@
                 background-color: white;
                 color: black;
             }
-            @media (max-width: 800px) {
-                
-                .middle {
-                    width: 97%;
-                    
-                }
-                
-            }
+            
             .error-message {
                 width: 100%;
                 display: flex;
@@ -126,13 +125,19 @@
                 flex-direction: column;
                 align-items: center;
                 border-bottom: 1px solid rgba(132, 30, 2, 0.705);
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+                position: relative;
+                margin: 50 auto;
                 
-                height: 550px;
+                height: 450px;
                 background-color: rgb(17, 17, 17);
+            }
+            @media (max-width: 800px) {
+                
+                .middle {
+                    width: 97%;
+                    
+                }
+                
             }
             .middle-header {
                 font-family: 'IBM Plex Sans JP', sans-serif;

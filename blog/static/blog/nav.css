@@ -7,9 +7,9 @@ a {
     background-color: black;
     position: fixed;
     border-bottom: 1px solid rgba(255, 255, 255, 0.419);
-
-    left: 0px;
-    right: 0px;
+    
+    left: 0;
+    right: 0;
     height: 40px;
     font-family: 'Quicksand', sans-serif;
     padding: 10px;
@@ -17,6 +17,7 @@ a {
     justify-content: space-between;
     align-items: center;
     z-index: 2;
+    
 }
 
 .heading {
