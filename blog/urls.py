@@ -9,6 +9,6 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('contact_us/', views.contact_us, name='contact_us'),
     path('blogs/', views.blogs, name='blogs'), 
-    path('the_double_asteroid_redirection_test/', views.dart, name='dart'), 
+    path('double-asteroid-redirection-test/', views.dart, name='dart'), 
     path('scifix/', views.scifix, name="scifix"),
 ]

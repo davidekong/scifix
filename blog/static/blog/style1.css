@@ -51,7 +51,7 @@ body {
 }
 
 .scifix-block {
-    letter-spacing: 5px;
+    letter-spacing: 10px;
     background-color: white;
     color: black;
     border: 2px solid white;
@@ -62,7 +62,7 @@ body {
 }
 
 .scifix-block:hover {
-    letter-spacing: 5px;
+    letter-spacing: 10px;
     background-color: black;
     border: 2px solid white;
     color: white;
@@ -77,6 +77,11 @@ body {
 
 
 .box1-head h2 {
+    font-family: 'IBM Plex Sans JP', sans-serif;
+    
+    margin-right: 10px;
+}
+.box1-head h1 {
     font-family: 'IBM Plex Sans JP', sans-serif;
     
     margin-right: 10px;

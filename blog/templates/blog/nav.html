@@ -1,5 +1,6 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'blog/nav.css' %}">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <header class="nav">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -12,7 +13,7 @@
             <ion-icon name="menu-outline"></ion-icon>
         </div>
     </div>
-    <a href="{% url 'home' %}"><h1 class="heading">S C I F I X</h1></a>
+    <a href="{% url 'home' %}"><h2 class="heading">S C I F I X</h2></a>
     <div class="nav-elem-box">
         
         {% if user.is_authenticated %}

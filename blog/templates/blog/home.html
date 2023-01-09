@@ -1,15 +1,20 @@
 <html>
+    
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        
+        <title>SCIFIX - Community for Science, Technology and Culture</title>
+        
+        <meta name="description" content="SCIFIX - Information regarding the latest developments in the field of science and technology as well as their effects on the human society.">
+        
+        
+        <meta name="keywords" content="SCIFIX">
+        <meta name="author" content="David Ekong">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% load static %}
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <link rel="icon" href="/media/planet.svg" type="image/svg">
-        <title>SCIFIX - Community for Science, Technology and Culture</title>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Information regarding the latest developments in the field of science and technology as well as their effects on the human society.">
-        <meta name="keywords" content="SCIFIX, science, culture, NASA, MIT">
-        <meta name="author" content="David Ekong">
-        {% load static %}
         <link rel="stylesheet" href="{% static 'blog/style1.css' %}">
         <link rel="stylesheet" href="{% static 'blog/blogs.css' %}">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,11 +35,11 @@
                 <div class="box1">
                     <div class="box1-text">
                         <div class="box1-head">
-                            <h2>This is</h2><h2 class="scifix-block">S C I F I X</h2>
+                            <h2>This is</h2><h1 class="scifix-block">SCIFIX</h1>
                         </div>
                         <p class="box1-text-body"><span class="big">W</span>elcome to <span class="scifix-block-span">S C I F I X</span>, a blog that explores the intersection of science, arts, and culture!
 
-                            At <span class="scifix-block-span">S C I F I X</span>, we believe that <strong>science</strong> and the arts are not mutually exclusive, but rather complementary disciplines that can inform and enrich each other. We are passionate about sharing content that highlights the ways in which science and the arts intersect and interact, and we aim to provide a platform for discussion and exploration of this fascinating and important topic. 
+                            At SCIFIX, we believe that <strong>science</strong> and the arts are not mutually exclusive, but rather complementary disciplines that can inform and enrich each other. We are passionate about sharing content that highlights the ways in which science and the arts intersect and interact, and we aim to provide a platform for discussion and exploration of this fascinating and important topic. 
                             From discussions of the latest scientific research to explorations of the cultural significance of science and the arts, we strive to provide a diverse and thought-provoking range of content for our readers.</p>
                             
                     </div>
@@ -43,7 +48,7 @@
                     </div>
                 </div>
                 <div class="box2">
-                    <h2 class="scifix-block">S C I F I X</h2><span>is</span><h2 class="sci">SCIENCE</h2><span>&</span><h2 class="cul">CULTURE</h2>
+                    <h2 class="scifix-block">SCIFIX</h2><span>is</span><h2 class="sci">SCIENCE</h2><span>&</span><h2 class="cul">CULTURE</h2>
                 </div>
                 
             </div>
@@ -350,17 +355,18 @@
                     <div class="spotlight">
                         <h2><span class="scifix-block">S C I F I X</span> Spotlight</h2>
                         <div class="blog">
-                            <div class="blog-image-box2 blog-image-box" alt="earth">
+                            <div class="blog-image-box4 blog-image-box" alt="A poster of NASA's Double Asteroid Redirection Test">
                                 <div class="description">
                                     <span class="description-text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, sit modi! Praesentium similique laborum voluptas voluptate culpa.
+                                        The Double Asteroid Redirection Test might be humanity's first step towards space defence machines.
+                                    </span>
                                 </div>
                                 <div class="title">
-                                    <a href="#"><h2>Welcome to Earth</h2></a>
-                                    <a href="#"><div class="read-post-button">Read Post</div></a>
+                                    <a href="{% url 'dart' %}"><h2>The Double Asteroid Redirection Test</h2></a>
+                                    <a href="{% url 'dart' %}"><div class="read-post-button">Read Post</div></a>
                                 </div>
                                 <div class="blog-info">
-                                    <a href="#">29 Dec 2022</a>
+                                    <a href="#">28 Dec 2022</a>
                                 </div>
                                 
                             </div>
