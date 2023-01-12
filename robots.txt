@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+Host: scifixblog.herokuapp.com
+Sitemap: http://scifixblog.herokuapp.com/sitemap.xml
