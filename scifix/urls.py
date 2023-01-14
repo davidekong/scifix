@@ -19,6 +19,7 @@ from django.contrib.sitemaps.views import sitemap
 from django.conf.urls.static import static
 from django.conf import settings
 from blog.sitemaps import StaticViewSitemap
+from django.views.generic.base import TemplateView
 
 sitemaps = {
     'static': StaticViewSitemap,
@@ -31,6 +32,7 @@ urlpatterns = [
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
          name='django.contrib.sitemaps.views.sitemap'), 
     path("django-check-seo/", include("django_check_seo.urls")),
+    path('robots.txt', TemplateView.as_view(template_name='blog/robots.txt', content_type='text/plain')),
 ]
 
 
