@@ -19,9 +19,7 @@ def signup(request):
         email = request.POST['email']
         password1 = request.POST['password1']
         password2 = request.POST['password2']
-        first_name = request.POST['first_name']
-        last_name = request.POST['last_name']
-        if username == '' or email == '' or password1 == '' or password2 == '' or first_name == '' or last_name == '':
+        if username == '' or email == '' or password1 == '' or password2 == '':
             valid = False
             context['error_message'] = 'Please ensure all fields are appropriately filled.'
         elif len(password1) < 5:
@@ -35,8 +33,7 @@ def signup(request):
                 user = authenticate(username=username, email=email)
                 if user is None:
                     new_user = User.objects.create_user(username=username, email=email, password=password1)
-                    new_user.last_name = last_name
-                    new_user.first_name = first_name
+
                     new_user.save()
                     login(request, new_user, backend='django.contrib.auth.backends.ModelBackend')
                     return redirect('home')

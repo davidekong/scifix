@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-u-tf_w-$la5d8kk-boo)5d!s1swp8bto583xd$g+_$!^ywt7=#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['scifixblog.herokuapp.com', '127.0.0.1', 'testserver']
+ALLOWED_HOSTS = ['scifixblog.herokuapp.com', '127.0.0.1', 'testserver', '.vercel.app']
 
 SITE_ID = 2
 
