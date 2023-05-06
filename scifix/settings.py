@@ -25,9 +25,9 @@ SECRET_KEY = 'django-insecure-u-tf_w-$la5d8kk-boo)5d!s1swp8bto583xd$g+_$!^ywt7=#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['scifixblog.herokuapp.com', '127.0.0.1', 'testserver', '.vercel.app']
+ALLOWED_HOSTS = ['scifixblog.herokuapp.com', '127.0.0.1', 'testserver', '.vercel.app', 'scifixblog.pythonanywhere.com']
 
-SITE_ID = 2
+SITE_ID = 3
 
 # Application definition
 
@@ -53,8 +53,8 @@ INSTALLED_APPS = [
 
 
 
-LOGIN_REDIRECT_URL = '/home/'
-LOGOUT_REDIRECT_URL = '/home/'
+LOGIN_REDIRECT_URL = ''
+LOGOUT_REDIRECT_URL = ''
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
         # For each OAuth based provider, either add a ``SocialApp``
